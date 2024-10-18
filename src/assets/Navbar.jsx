@@ -14,13 +14,13 @@ const Navbar = () => {
 
       <ul className="navbar-links">
         <li>
-          <a href="#product">Product</a>
+          <a href="#Home">Home</a>
         </li>
         <li>
-          <a href="#pricing">Pricing</a>
+          <a href="#Services">Services</a>
         </li>
         <li>
-          <a href="#docs">Docs</a>
+          <a href="#aboutus">About Us</a>
         </li>
         <li>
           <a href="#contact">Contact</a>

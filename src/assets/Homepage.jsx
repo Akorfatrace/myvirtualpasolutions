@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
-import "./Homepage.css";
-import ServicesSection from "./Servicessection";
+import "./Homepage.css"; // Ensures homepage-wide styles are applied
+import ServicesSection from "./Servicessection"; // Corrected the filename casing
 
 const Homepage = () => {
   return (

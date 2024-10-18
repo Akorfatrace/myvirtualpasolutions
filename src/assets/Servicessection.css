@@ -1,46 +1,55 @@
 /* Services section styles */
 .services {
-  padding: 20px; /* Padding for the services section */
-  text-align: center; /* Center text in services section */
+  padding: 20px 0;
+  text-align: center;
+  background-color: #f5f5f5;
+  min-height: 60vh;
+  width: 100vw; /* Full width */
+  position: relative;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .service-list {
-  display: flex; /* Flex display for service items */
-  justify-content: center; /* Center items */
-  gap: 20px; /* Gap between service items */
-  transition: all 0.3s ease; /* Smooth transition */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+  margin: 0;
+  padding: 0;
 }
 
 .service {
-  max-width: 300px; /* Max width for individual services */
-  padding: 20px; /* Padding for service items */
-  border: 1px solid #eaeaea; /* Optional border */
-  border-radius: 5px; /* Rounded edges for services */
-  cursor: pointer; /* Pointer on hover */
-  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+  max-width: 300px;
+  padding: 20px;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .service:hover {
-  background-color: rgba(103, 114, 229, 0.1); /* Background on hover */
-  transform: scale(1.05); /* Slightly enlarge on hover */
+  background-color: rgba(103, 114, 229, 0.1);
+  transform: scale(1.05);
 }
 
-.service.selected {
-  background-color: #6772e5; /* Highlight color for selected card */
-  color: white; /* Change text color for selected card */
+.slider-controls {
+  margin-top: 20px;
 }
 
-.toggle-button {
-  margin-top: 20px; /* Space between cards and button */
-  padding: 10px 20px; /* Padding for button */
-  border: none; /* Remove default border */
-  border-radius: 5px; /* Rounded edges for button */
-  background-color: #6772e5; /* Button background color */
-  color: white; /* Button text color */
-  cursor: pointer; /* Pointer on hover */
-  transition: background-color 0.3s; /* Smooth transition for button */
+.slider-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6772e5;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 0 10px;
 }
 
-.toggle-button:hover {
-  background-color: #5563d0; /* Darker shade on hover */
+.slider-button:hover {
+  background-color: #5563d0;
 }

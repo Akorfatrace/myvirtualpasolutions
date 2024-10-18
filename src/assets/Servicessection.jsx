@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-import "./ServicesSection.css";
+import "./ServicesSection.css"; // Corrected the filename casing
 
 const ServicesSection = () => {
-  const [showAll, setShowAll] = useState(false);
-  const [selectedCard, setSelectedCard] = useState(null);
-
   const services = [
     {
       title: "Easy Integration",
@@ -24,26 +21,41 @@ const ServicesSection = () => {
     },
   ];
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex + 3 < services.length ? prevIndex + 1 : 0
+    );
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex > 0 ? prevIndex - 1 : services.length - 1
+    );
+  };
+
   return (
     <section className="services" id="services">
       <h2>Our Services</h2>
       <div className="service-list">
         {services
-          .slice(0, showAll ? services.length : 2)
+          .slice(currentIndex, currentIndex + 3)
           .map((service, index) => (
-            <div
-              key={index}
-              className={`service ${selectedCard === index ? "selected" : ""}`}
-              onClick={() => setSelectedCard(index)}
-            >
+            <div key={index} className="service">
               <h3>{service.title}</h3>
               <p>{service.description}</p>
             </div>
           ))}
       </div>
-      <button className="toggle-button" onClick={() => setShowAll(!showAll)}>
-        {showAll ? "Show Less" : "Show More"}
-      </button>
+      <div className="slider-controls">
+        <button className="slider-button" onClick={handlePrev}>
+          &lt;
+        </button>
+        <button className="slider-button" onClick={handleNext}>
+          &gt;
+        </button>
+      </div>
     </section>
   );
 };

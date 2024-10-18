@@ -1,0 +1,35 @@
+/* src/assets/Footer.css */
+
+.footer {
+  background-color: #333; /* Dark background color */
+  color: white; /* White text color */
+  padding: 20px 0; /* Padding for top and bottom */
+  text-align: center; /* Center the text */
+}
+
+.footer-content {
+  max-width: 1145px; /* Optional: limit the width */
+  margin: 0 auto; /* Center the content */
+}
+
+.footer-links {
+  list-style: none; /* Remove bullet points */
+  display: flex; /* Use flexbox for links */
+  justify-content: center; /* Center the links */
+  gap: 15px; /* Space between links */
+  padding: 0; /* Remove default padding */
+}
+
+.footer-links li {
+  display: inline; /* Inline display for list items */
+}
+
+.footer-links li a {
+  color: white; /* Link color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.footer-links li a:hover {
+  color: #6772e5; /* Change color on hover */
+}

@@ -1,0 +1,52 @@
+/* Reset body margin and prevent horizontal scrolling */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  width: 100%; /* Ensure full-width */
+  box-sizing: border-box;
+}
+
+/* Hero section styles */
+.hero {
+  display: flex; /* Enable flexbox layout */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between elements */
+  width: 100%; /* Full width of the viewport */
+  max-width: 1145px; /* Optional: max width for larger screens */
+  height: 546px; /* Fixed height */
+  margin: 0 auto; /* Center the hero section horizontally */
+  padding: 20px;
+}
+
+/* Left and right halves of the hero section */
+.left-half {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.right-half {
+  flex: 1;
+}
+
+.right-half img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Heading and paragraph styles */
+.hero h2 {
+  margin: 0;
+}
+
+.hero h2 .great-product {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.hero p {
+  margin-top: 10px;
+}

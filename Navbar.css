@@ -2,11 +2,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 10px;
+  padding: 5px 10px; /* Adjust as needed */
   background-color: white;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-  margin: 20px 50px;
+  margin: 10px 0; /* Reduce or remove side margins */
   border-radius: 20px; /* Rounded edges */
+  width: 100%;
+  max-width: 1200px; /* Set a max-width for all screens */
+  margin: 0 auto; /* Center the navbar */
+  margin-top: 20px;
 }
 
 .navbar-logo {

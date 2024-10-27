@@ -2,12 +2,10 @@ import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer"; // Import the Footer component
 import "./Homepage.css"; // Ensure this file contains the right styles
-import ServicesSection from "./Servicessection";
 
 const Homepage = () => {
   return (
     <div className="homepage">
-      <Navbar />
       <header className="hero">
         <div className="left-half">
           <h2>
@@ -24,7 +22,6 @@ const Homepage = () => {
           <img src="/Images/imagex.jpg" alt="Great product" />
         </div>
       </header>
-      <ServicesSection />
       <Footer /> {/* Add the Footer component here */}
     </div>
   );

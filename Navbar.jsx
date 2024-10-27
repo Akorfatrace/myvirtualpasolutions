@@ -1,4 +1,6 @@
+// src/Navbar.jsx
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -14,16 +16,17 @@ const Navbar = () => {
 
       <ul className="navbar-links">
         <li>
-          <a href="#Home">Home</a>
+          <Link to="/">Home</Link> {/* Update this to use Link */}
         </li>
         <li>
-          <a href="#Services">Services</a>
+          <Link to="#Services">Services</Link>
         </li>
         <li>
-          <a href="#aboutus">About Us</a>
+          <Link to="#aboutus">About Us</Link>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <Link to="/contact">Contact</Link>{" "}
+          {/* Update to link to Contact page */}
         </li>
       </ul>
     </nav>

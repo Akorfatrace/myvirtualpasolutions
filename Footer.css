@@ -1,0 +1,93 @@
+.footer {
+  background-color: white; /* Dark background color */
+  color: rgb(46, 44, 44); /* Text color */
+  padding: 40px 0; /* Padding for top and bottom */
+  text-align: center; /* Center the text */
+  width: 100%; /* Full width of the viewport */
+}
+
+.footer-content {
+  max-width: 1145px; /* Optional: limit the width */
+  margin: 0 auto; /* Center the content */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between sections */
+  flex-wrap: wrap; /* Allow wrapping to next line if necessary */
+}
+
+.footer-section {
+  flex: 1; /* Each section takes equal space */
+  padding: 10px; /* Padding around each section */
+  min-width: 200px; /* Minimum width for responsiveness */
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 20px; /* Space between heading and text */
+}
+
+.footer-links {
+  display: flex; /* Horizontal layout for links */
+  gap: 15px; /* Space between links */
+}
+
+.icon-cards {
+  display: flex; /* Horizontal layout for icon cards */
+  gap: 15px; /* Space between icon cards */
+  justify-content: center; /* Center the icons */
+}
+
+.icon-card {
+  background-color: white; /* Card color */
+  border-radius: 50%; /* Circular cards */
+  width: 50px; /* Card width */
+  height: 50px; /* Card height */
+  display: flex; /* Flexbox for centering */
+  align-items: center; /* Center the icon vertically */
+  justify-content: center; /* Center the icon horizontally */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Deep shadow effect */
+  transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.icon-card:hover {
+  transform: scale(1.1); /* Scale effect on hover */
+}
+
+.footer-section a {
+  color: black; /* Link color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.footer-section a:hover {
+  color: #6772e5; /* Change color on hover */
+}
+
+.footer-bottom {
+  margin-top: 30px; /* Space above the copyright text */
+}
+
+.ash-line {
+  border: 0; /* Remove default border */
+  height: 1px; /* Height of the line */
+  background: rgba(128, 128, 128, 0.5); /* Ash color */
+  margin: 10px 20; /* Space above and below the line */
+}
+.social-icons {
+  display: flex; /* Horizontal layout for social icons */
+  gap: 15px; /* Space between icons */
+  justify-content: center; /* Center the icons */
+  font-size: 18px; /* Size of the icons */
+  margin-top: 100px; /* Adjust this value to move icons down */
+  margin-bottom: 0; /* Remove any bottom margin */
+  /* Optionally, you can add padding if needed */
+}
+.icon-card {
+  background-color: white; /* Card background color */
+  border-radius: 50%; /* Make the card round */
+  width: 30px; /* Adjust the width of the card */
+  height: 30px; /* Adjust the height of the card */
+  display: flex; /* Center the icon inside the card */
+  align-items: center; /* Center icon vertically */
+  justify-content: center; /* Center icon horizontally */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Deep shadow effect */
+}

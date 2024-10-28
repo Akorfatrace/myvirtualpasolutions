@@ -43,8 +43,8 @@
   text-align: center; /* Center text */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: shadow for better visibility */
   width: 90%; /* Ensure it fills the width */
-  max-width: 800px; /* Limit max width */
-  max-height: 500px;
+  width: 1000px; /* Limit max width */
+  height: 620px;
   margin-top: 60px;
   margin-bottom: 160px;
 }

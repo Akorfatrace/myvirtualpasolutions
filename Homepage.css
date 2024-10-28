@@ -20,7 +20,6 @@ body {
   align-items: center; /* Center items vertically */
   justify-content: center; /* Center elements horizontally */
   width: 100%; /* Full width of the viewport */
-  max-width: 1145px; /* Optional: max width for larger screens */
   height: 546px; /* Fixed height */
   margin: 20px auto; /* Center the hero section horizontally with margin */
   padding: 20px;
@@ -49,7 +48,6 @@ body {
 }
 
 .footer-content {
-  max-width: 1145px; /* Optional: limit the width */
   margin: 0 auto; /* Center the content */
   display: flex; /* Use flexbox for layout */
   justify-content: space-between; /* Space between sections */

@@ -6,8 +6,8 @@
   margin: 0; /* Remove any default margins */
 }
 
-.content {
-  flex: 1; /* Allow content to grow and take available space */
+.background-wrapper {
+  flex: 1; /* Allow this wrapper to grow and take available space */
   background-image: url("/images/contact-background.png"); /* Set background image */
   background-size: cover; /* Ensure the background image covers the entire area */
   background-position: bottom center; /* Align the image to the bottom center */
@@ -16,16 +16,23 @@
   flex-direction: column; /* Stack navbar and card vertically */
   align-items: center; /* Center horizontally */
   justify-content: flex-start; /* Align items at the top */
-  width: 100vw; /* Ensure full width */
-  margin: 0; /* No margins */
 }
 
 .navbar-wrapper {
-  width: 100%;
+  width: 100%; /* Ensure the navbar can take full width */
+  display: flex; /* Flex to center contents if needed */
+  justify-content: center; /* Center the navbar */
+  margin-bottom: 20px; /* Space between navbar and form card */
+}
 
-  margin: 0 auto; /* Center within the page */
-  display: flex;
-  justify-content: center;
+.content {
+  flex: 1; /* Allow content to grow and take available space */
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack card vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: flex-start; /* Align items at the top */
+  width: 100%; /* Ensure full width */
+  margin: 0; /* No margins */
 }
 
 .form-card {
@@ -37,7 +44,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: shadow for better visibility */
   width: 90%; /* Ensure it fills the width */
   max-width: 800px; /* Limit max width */
-  height: 450px;
+  max-height: 500px;
   margin-top: 60px;
   margin-bottom: 160px;
 }

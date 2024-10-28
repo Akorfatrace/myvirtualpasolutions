@@ -6,6 +6,7 @@ import "./Homepage.css"; // Ensure this file contains the right styles
 const Homepage = () => {
   return (
     <div className="homepage">
+      <Navbar />
       <header className="hero">
         <div className="left-half">
           <h2>

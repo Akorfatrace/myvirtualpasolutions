@@ -3,52 +3,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap");
 
 .contact-page {
-  min-height: 100vh; /* Ensure it covers full viewport height */
+  min-height: 100vh;
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  width: 100vw; /* Fill the entire width of the viewport */
-  margin: 0; /* Remove any default margins */
+  flex-direction: column;
+  width: 100vw;
+  margin: 0;
 }
 
 .background-wrapper {
-  flex: 1; /* Allow this wrapper to grow and take available space */
-  background-image: url("/images/contact-background.png"); /* Set background image */
-  background-size: cover; /* Ensure the background image covers the entire area */
-  background-position: bottom center; /* Align the image to the bottom center */
-  background-repeat: no-repeat; /* Prevent repeating the background */
-  display: flex; /* Use flexbox */
-  flex-direction: column; /* Stack navbar and card vertically */
-  align-items: center; /* Center horizontally */
-  justify-content: flex-start; /* Align items at the top */
+  flex: 1;
+  background-image: url("/images/contact-background.png");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .navbar-wrapper {
-  width: 100%; /* Ensure the navbar can take full width */
-  display: flex; /* Flex to center contents if needed */
-  justify-content: center; /* Center the navbar */
-  margin-bottom: 20px; /* Space between navbar and form card */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .content {
-  flex: 1; /* Allow content to grow and take available space */
-  display: flex; /* Use flexbox */
-  flex-direction: column; /* Stack card vertically */
-  align-items: center; /* Center horizontally */
-  justify-content: flex-start; /* Align items at the top */
-  width: 100%; /* Ensure full width */
-  margin: 0; /* No margins */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 0;
 }
 
 .form-card {
-  background-color: rgba(40, 75, 100, 0.9); /* 50% opacity */
-
-  color: #333; /* Text color */
-  padding: 30px; /* Add some padding */
-  border-radius: 40px; /* Optional: rounded corners */
-  text-align: center; /* Center text */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: shadow for better visibility */
-  width: 90%; /* Ensure it fills the width */
-  width: 900px; /* Limit max width */
+  background-color: rgba(40, 75, 100, 0.9);
+  color: #333;
+  padding: 30px;
+  border-radius: 40px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 900px;
   height: 530px;
   margin-top: 60px;
   margin-bottom: 160px;
@@ -56,76 +55,162 @@
 
 input,
 textarea {
-  width: 100%; /* Fill the width */
-  padding: 10px; /* Add padding */
-  margin: 10px 0; /* Add margin */
-  border: 1px solid #ccc; /* Border style */
-  border-radius: 5px; /* Rounded corners */
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 button {
-  background-color: #007bff; /* Button color */
-  color: white; /* Text color */
-  border: none; /* Remove border */
-  padding: 10px 20px; /* Padding */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer on hover */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3; /* Darker button on hover */
+  background-color: #0056b3;
 }
 
 .card-wrapper {
-  display: flex; /* Align cards horizontally */
+  display: flex;
   justify-content: space-between;
   width: 100%;
-  gap: 20px; /* Optional: space between the cards */
+  gap: 20px;
 }
 
 .info-card {
-  background-color: #ffffff; /* Example background color */
-  color: #333;
-  padding: 30px;
-  border-radius: 25px;
-  margin-top: 10px;
-  width: 360px; /* Match width of small card */
-  height: 450px; /* Match height of small card */
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-/* "Ready to Start Your Project?" styling */
-.info-heading h3 {
-  font-family: "ACHERUS GROTESQUE", sans-serif;
-  font-size: 25px;
-  color: #333; /* Adjust color as needed */
-}
-
-/* "Let's make your vision a reality..." styling */
-.info-description p {
-  font-family: "Moontime", cursive;
-  font-size: 20px; /* Adjust size as needed */
-  color: #666;
-}
-
-/* Contact info styling */
-.info-contact p {
-  font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  color: #444;
-  margin: 5px 0; /* Optional spacing */
-}
-
-.small-card {
-  background-color: #284b64; /* Color for the small card */
   color: white;
   padding: 30px;
   border-radius: 25px;
-  width: 360px; /* Width of the small card */
+  margin-top: 10px;
+  width: 500px;
   height: 450px;
+  text-align: center;
+}
+
+.info-heading h3 {
+  margin-top: 60px;
+  font-size: 45px;
+  color: white;
+}
+
+.info-description p {
+  margin-top: 20px;
+  font-size: 15px;
+  color: white;
+}
+
+/* Modified small-card for form field */
+.small-card {
+  background-color: #284b64;
+  color: white;
+  padding: 30px;
+  border-radius: 25px;
+  width: 360px;
+  height: auto;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   margin-left: auto;
-  margin-top: 10px;
   margin-right: 20px;
+  scroll-margin-bottom: 20px;
 }
+
+.small-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.small-card h4 {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 120%;
+  padding: 8px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1.5px solid #ccc;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  outline: none;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+button {
+  background-color: #284b64;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+button:hover {
+  background-color: #3d6e71;
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: 12px;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+/* Social media handle field styles */
+input[type="text"].social-media {
+  width: 120%;
+  padding: 8px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1.5px solid #ccc;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  outline: none;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+select {
+  padding: 8px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1.5px solid #ccc;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  outline: none;
+}
+/* Ensure the dropdown options are visible */
+select option {
+  background-color: #284b64; /* Background color of the options */
+  color: white; /* Text color of the options */
+}
+
+/* When the select dropdown is active */
+select:focus {
+  background-color: #3d6e71; /* Darker background on focus */
+  color: white; /* Ensure text stays white when focused */
+}
+
+/* Rest of the form styles remain the same */

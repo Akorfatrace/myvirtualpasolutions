@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=ACHERUS+GROTESQUE&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Moontime&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap");
+
 .contact-page {
   min-height: 100vh; /* Ensure it covers full viewport height */
   display: flex;
@@ -36,15 +40,16 @@
 }
 
 .form-card {
-  background-color: #284b64;
+  background-color: rgba(40, 75, 100, 0.9); /* 50% opacity */
+
   color: #333; /* Text color */
   padding: 30px; /* Add some padding */
-  border-radius: 30px; /* Optional: rounded corners */
+  border-radius: 40px; /* Optional: rounded corners */
   text-align: center; /* Center text */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: shadow for better visibility */
   width: 90%; /* Ensure it fills the width */
-  width: 1000px; /* Limit max width */
-  height: 620px;
+  width: 900px; /* Limit max width */
+  height: 530px;
   margin-top: 60px;
   margin-bottom: 160px;
 }
@@ -69,4 +74,58 @@ button {
 
 button:hover {
   background-color: #0056b3; /* Darker button on hover */
+}
+
+.card-wrapper {
+  display: flex; /* Align cards horizontally */
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px; /* Optional: space between the cards */
+}
+
+.info-card {
+  background-color: #ffffff; /* Example background color */
+  color: #333;
+  padding: 30px;
+  border-radius: 25px;
+  margin-top: 10px;
+  width: 360px; /* Match width of small card */
+  height: 450px; /* Match height of small card */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+/* "Ready to Start Your Project?" styling */
+.info-heading h3 {
+  font-family: "ACHERUS GROTESQUE", sans-serif;
+  font-size: 25px;
+  color: #333; /* Adjust color as needed */
+}
+
+/* "Let's make your vision a reality..." styling */
+.info-description p {
+  font-family: "Moontime", cursive;
+  font-size: 20px; /* Adjust size as needed */
+  color: #666;
+}
+
+/* Contact info styling */
+.info-contact p {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  color: #444;
+  margin: 5px 0; /* Optional spacing */
+}
+
+.small-card {
+  background-color: #284b64; /* Color for the small card */
+  color: white;
+  padding: 30px;
+  border-radius: 25px;
+  width: 360px; /* Width of the small card */
+  height: 450px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-top: 10px;
+  margin-right: 20px;
 }

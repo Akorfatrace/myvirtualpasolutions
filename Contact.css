@@ -1,7 +1,9 @@
+/* Importing Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=ACHERUS+GROTESQUE&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Moontime&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap");
 
+/* Contact Page Styling */
 .contact-page {
   min-height: 100vh;
   display: flex;
@@ -39,6 +41,7 @@
   margin: 0;
 }
 
+/* Form Card Styling */
 .form-card {
   background-color: rgba(40, 75, 100, 0.9);
   color: #333;
@@ -48,33 +51,12 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   width: 90%;
   max-width: 900px;
-  height: 530px;
-  margin-top: 60px;
+  height: 540px;
+  margin-top: 40px;
   margin-bottom: 160px;
 }
 
-input,
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
+/* Card Wrapper Styling */
 .card-wrapper {
   display: flex;
   justify-content: space-between;
@@ -82,6 +64,7 @@ button:hover {
   gap: 20px;
 }
 
+/* Info Card Styling */
 .info-card {
   color: white;
   padding: 30px;
@@ -92,23 +75,49 @@ button:hover {
   text-align: center;
 }
 
-.info-heading h3 {
-  margin-top: 60px;
-  font-size: 45px;
-  color: white;
+.info-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading-1 {
+  margin-top: 80px;
+}
+
+/* Gradient Styling for Ready to Delegate Section */
+.heading-1 h2 {
+  background: linear-gradient(135deg, #ffd9d8, #abecf0, #ffd9d8);
+  background-clip: text; /* Standard property */
+  -webkit-background-clip: text; /* For compatibility */
+  color: transparent; /* Ensures only the gradient shows */
+  font-size: 2.5rem; /* Adjust font size as needed */
+  font-weight: bold;
+  padding: 10px 0;
+  text-align: center;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional shadow or outline to enhance visibility */
+.heading-1 h2 {
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+}
+
+.heading-2 {
+  margin-top: 20px;
 }
 
 .info-description p {
-  margin-top: 20px;
+  margin-top: 45px;
   font-size: 15px;
   color: white;
 }
 
-/* Modified small-card for form field */
+/* Small Card - Adjust position */
 .small-card {
   background-color: #284b64;
   color: white;
-  padding: 30px;
+  padding: 20px;
   border-radius: 25px;
   width: 360px;
   height: auto;
@@ -117,48 +126,102 @@ button:hover {
   margin-left: auto;
   margin-right: 20px;
   scroll-margin-bottom: 20px;
+  margin-top: -25px; /* Ensures it is aligned at the top of its container */
 }
-
 .small-card h3 {
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
 .small-card h4 {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: normal;
   margin-bottom: 20px;
+  margin-top: 10px;
   color: #ddd;
 }
 
+/* Form Styling */
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-input {
-  width: 120%;
-  padding: 8px;
+/* Input, Textarea, Select Field Styling */
+input,
+textarea {
+  width: 200px;
+  padding: 15px;
   margin: 10px 0;
   border: none;
-  border-bottom: 1.5px solid #ccc;
+  border-radius: 12px; /* Slight curve on the edges */
+  background: transparent;
+  color: white;
+  font-size: 12.8px;
+  outline: none;
+  border-bottom: 1.5px solid #ffd9d8;
+  display: block;
+  margin-left: auto; /* Centers the element */
+  margin-right: auto; /* Centers the element */
+}
+
+select {
+  width: 100%;
+  max-width: 360px;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 12.5px; /* Slight curve on the edges */
   background: transparent;
   color: white;
   font-size: 14px;
   outline: none;
+  border-bottom: 1.5px solid #ccc;
+  display: block;
 }
 
-input::placeholder {
-  color: #aaa;
+/* Placeholder Styling */
+input::placeholder,
+textarea::placeholder {
+  color: white;
+  text-align: center;
 }
 
-button {
+/* Select Dropdown Styling */
+select {
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 12px;
+  background: transparent;
+  color: white;
+  font-size: 12px;
+  outline: none;
+  border-bottom: 1.5px solid #ffd9d8;
+}
+
+select option {
   background-color: #284b64;
   color: white;
+}
+
+select:focus {
+  background-color: #3d6e71;
+  color: white;
+}
+
+input[type="text"].social-media::placeholder {
+  text-align: center;
+}
+
+/* Button Styling */
+button {
+  background-color: #284b64;
+  color: #ffd9d8;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 12px 20px;
+  border-radius: 12px;
   cursor: pointer;
   margin-top: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
@@ -168,49 +231,10 @@ button:hover {
   background-color: #3d6e71;
 }
 
+/* Error Message Styling */
 .error {
   color: #ff6b6b;
   font-size: 12px;
   margin-top: -8px;
   margin-bottom: 10px;
 }
-/* Social media handle field styles */
-input[type="text"].social-media {
-  width: 120%;
-  padding: 8px;
-  margin: 10px 0;
-  border: none;
-  border-bottom: 1.5px solid #ccc;
-  background: transparent;
-  color: white;
-  font-size: 14px;
-  outline: none;
-}
-
-input::placeholder {
-  color: #aaa;
-}
-
-select {
-  padding: 8px;
-  margin: 10px 0;
-  border: none;
-  border-bottom: 1.5px solid #ccc;
-  background: transparent;
-  color: white;
-  font-size: 14px;
-  outline: none;
-}
-/* Ensure the dropdown options are visible */
-select option {
-  background-color: #284b64; /* Background color of the options */
-  color: white; /* Text color of the options */
-}
-
-/* When the select dropdown is active */
-select:focus {
-  background-color: #3d6e71; /* Darker background on focus */
-  color: white; /* Ensure text stays white when focused */
-}
-
-/* Rest of the form styles remain the same */

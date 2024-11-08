@@ -42,8 +42,12 @@ const Contact = () => {
             <div className="card-wrapper">
               <div className="info-card">
                 <div className="info-heading">
-                  <h3>Ready to Delegate?</h3>
-                  <h3>Let's Connect!</h3>
+                  <div className="heading-1">
+                    <h2>Ready to Delegate?</h2>
+                  </div>
+                  <div className="heading-2">
+                    <h3>Let's Connect!</h3>
+                  </div>
                 </div>
                 <div className="info-description">
                   <p>
@@ -62,7 +66,7 @@ const Contact = () => {
                     <input
                       type="text"
                       name="name"
-                      placeholder="Enter your name*"
+                      placeholder="Name of your Business*"
                       value={formData.name}
                       onChange={handleInputChange}
                       required
@@ -87,7 +91,7 @@ const Contact = () => {
                       type="text"
                       name="socialHandle"
                       className="social-media"
-                      placeholder="Enter your social media handle*"
+                      placeholder="Social media handle*"
                       value={formData.socialHandle}
                       onChange={handleInputChange}
                       required
@@ -100,7 +104,7 @@ const Contact = () => {
                     <input
                       type="email"
                       name="email"
-                      placeholder="Enter your email*"
+                      placeholder="Email Address*"
                       value={formData.email}
                       onChange={handleInputChange}
                     />
@@ -109,7 +113,7 @@ const Contact = () => {
                     <input
                       type="text"
                       name="interest"
-                      placeholder="Describe your interest*"
+                      placeholder="Tell us about your work briefly*"
                       value={formData.interest}
                       onChange={handleInputChange}
                     />

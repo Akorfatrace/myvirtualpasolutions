@@ -27,7 +27,7 @@ const Homepage = () => {
       const scrollY = window.scrollY;
 
       if (heroRef.current) {
-        heroRef.current.style.opacity = 1 - scrollY / 300;
+        heroRef.current.style.opacity = 1 - scrollY / 500;
         heroRef.current.style.transform = `translateY(${scrollY * -0.2}px)`;
       }
 
@@ -35,9 +35,9 @@ const Homepage = () => {
       if (introRef.current) {
         const rect = introRef.current.getBoundingClientRect();
         if (rect.top < window.innerHeight && rect.bottom >= 0) {
-          introRef.current.classList.add("visible");
+          introRef.current.classList.add("visible"); // Add class to trigger animation
         } else {
-          introRef.current.classList.remove("visible");
+          introRef.current.classList.remove("visible"); // Remove class if not in view
         }
       }
     };
@@ -54,18 +54,28 @@ const Homepage = () => {
       >
         <Navbar />
         <div className="hero-overlay" ref={heroRef}>
-          <h1 className="hero-title">Empower Your Business</h1>
-          <p className="hero-subtitle">With Unmatched Support & Solutions</p>
+          <h1 className="hero-title">Delegate to Elevate</h1>
+          <p className="hero-subtitle">Your Success • Our Priority</p>
         </div>
       </div>
 
       <section className="intro-section" ref={introRef}>
-        <h2>Achieve More with Professional Support You Can Trust</h2>
-        <p>
-          We provide reliable, streamlined solutions that empower busy
-          entrepreneurs and executives to focus on growth, leaving the details
-          to us.
-        </p>
+        <div className="text">
+          <h2>Achieve More with Professional Support You Can Trust</h2>
+          <p>
+            We provide reliable, streamlined solutions that empower busy
+            entrepreneurs and executives to focus on growth, leaving the details
+            to us.
+          </p>
+        </div>
+        <div className="card">
+          <img src="/images/card-image.jpg" alt="Card Image" />
+          <h3>Our Services</h3>
+          <p>
+            Explore a variety of professional services tailored to help you
+            achieve more with less effort.
+          </p>
+        </div>
       </section>
 
       {/* Placeholder content section to see scrolling effect */}

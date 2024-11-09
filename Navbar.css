@@ -1,68 +1,63 @@
+/* src/Navbar.css */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 10px; /* Adjust as needed */
-  background-color: white;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-  margin: 10px 0; /* Reduce or remove side margins */
-  border-radius: 20px; /* Rounded edges */
+  padding: 5px 20px; /* Reduced padding to reduce vertical height */
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
   width: 100%;
-  max-width: 1200px; /* Set a max-width for all screens */
-  margin: 0 auto; /* Center the navbar */
-  margin-top: 20px;
+  max-width: 1200px;
+  margin: 20px auto 0; /* Added margin-top to give space at the top */
 }
 
-.navbar-logo {
-  font-size: 10px;
-  font-weight: bold;
-  color: #32325d;
+.navbar-logo img {
+  height: 45px; /* Adjusted logo size to fit better */
 }
 
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 15px;
-}
-
-.navbar-links li {
-  display: flex;
-  align-items: center;
+  gap: 20px; /* Reduced gap for a tighter layout */
+  margin: 0;
 }
 
 .navbar-links li a {
   text-decoration: none;
-  color: #32325d;
-  transition: color 0.3s;
-  border-radius: 5px;
-  padding: 3px 8px;
-  font-size: 12px;
+  color: #353535; /* Dark gray for the text */
+  font-size: 15px; /* Reduced font size to adjust vertical length */
+  font-weight: 500;
+  position: relative; /* Needed for the underline effect */
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; /* Distance from the text */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Thicker underline */
+  background: linear-gradient(
+    to right,
+    #3d6e71,
+    #ffd9d8
+  ); /* Gradient from blue to pink */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  box-shadow: 0 0 15px rgba(61, 110, 113, 0.8); /* Soft glow effect */
+  border-radius: 150px; /* Soft, rounded edges */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for both underline and glow */
+}
+
+.navbar-links li a.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  box-shadow: 0 0 20px rgba(61, 110, 113, 1); /* Brighter glow on active link */
 }
 
 .navbar-links li a:hover {
-  color: #6772e5;
-  background-color: rgba(103, 114, 229, 0.1);
-}
-
-.login-button,
-.signup-button {
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.login-button {
-  background-color: transparent;
-  color: #6772e5;
-  border: 2px solid #6772e5;
-}
-
-.signup-button {
-  background-color: #6772e5;
-  color: white;
-}
-
-.signup-button:hover {
-  background-color: #5563d0;
+  color: #3d6e71; /* Color change on hover */
+  text-shadow: 0 0 5px rgba(61, 110, 113, 0.6); /* Glowing effect on hover */
 }

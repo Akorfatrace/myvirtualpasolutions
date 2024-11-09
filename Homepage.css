@@ -1,115 +1,114 @@
-/* Reset body margin and prevent horizontal scrolling */
-html,
-body {
+/* Ensure the navbar stays on top of the hero overlay */
+.navbar {
+  position: relative;
+  z-index: 2; /* Ensure the navbar stays above the hero overlay */
+}
+
+/* Parallax background */
+.parallax-background {
+  min-height: 100vh; /* Full screen height */
+  width: 100vw;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 120vh; /* Make the background longer to show more of the image */
+}
+
+/* Fixed hero overlay for fade-out scroll effect */
+.hero-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Optional overlay to enhance text visibility */
+  color: #fff;
+  z-index: 1; /* Lower z-index to pass behind navbar */
+  pointer-events: none; /* Allow scrolling underneath */
+}
+
+/* Hero title and subtitle styling */
+.hero-title {
+  font-size: 4rem;
+  font-weight: bold;
   margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scroll */
-  width: 100%; /* Ensure full-width */
-  box-sizing: border-box; /* Ensure box-sizing is applied */
-  display: flex; /* Use flexbox for centering */
-  flex-direction: column; /* Column layout */
-  min-height: 100vh; /* Full height of viewport */
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  background-color: #242424; /* Background color */
+  opacity: 1;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* Hero section styles */
-.hero {
-  display: flex; /* Enable flexbox layout */
-  align-items: center; /* Center items vertically */
-  justify-content: center; /* Center elements horizontally */
-  width: 100%; /* Full width of the viewport */
-  height: 546px; /* Fixed height */
-  margin: 20px auto; /* Center the hero section horizontally with margin */
-  padding: 20px;
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: 10px;
+  opacity: 1;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* Left and right halves of the hero section */
-.left-half,
-.right-half {
-  flex: 1; /* Allow halves to grow equally */
+/* Intro section to appear after hero fades */
+.intro-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  margin-top: 0; /* Remove any top margin */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
-.right-half img {
-  width: 100%; /* Ensure image takes full width */
-  max-width: 600px; /* Maximum width for the image */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Cover the area without distortion */
+/* Visible state of the intro section */
+.intro-section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Footer styles */
-.footer {
-  background-color: white; /* Dark background color */
-  color: rgb(46, 44, 44); /* Text color */
-  padding: 40px 0; /* Padding for top and bottom */
-  text-align: center; /* Center the text */
-  width: 100%; /* Full width of the viewport */
+.intro-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-.footer-content {
-  margin: 0 auto; /* Center the content */
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Space between sections */
-  flex-wrap: wrap; /* Allow wrapping to next line if necessary */
+.intro-section p {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
-/* General heading styles */
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Content section styling */
+.content-section {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* Button styles */
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.content-section h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #333;
 }
 
-button:hover {
-  border-color: #646cff;
-}
-
-.icon-cards {
-  display: flex; /* Horizontal layout for icon cards */
-  gap: 15px; /* Space between icon cards */
-  justify-content: center; /* Center the icons */
-  font-size: 18px; /* Size of the icons */
-  margin: 100px 0 0 0; /* Move icons down */
-}
-
-.icon-card {
-  background-color: white; /* Card color */
-  border-radius: 50%; /* Circular cards */
-  width: 50px; /* Card width */
-  height: 50px; /* Card height */
-  display: flex; /* Flexbox for centering */
-  align-items: center; /* Center the icon vertically */
-  justify-content: center; /* Center the icon horizontally */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Deep shadow effect */
-  transition: transform 0.3s; /* Smooth transition for hover effect */
-}
-
-.icon-card:hover {
-  transform: scale(1.1); /* Scale effect on hover */
-}
-
-/* Responsive styles */
-@media (prefers-color-scheme: light) {
-  body {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.content-section p {
+  font-size: 1rem;
+  color: #666;
+  margin: 15px 0;
 }

@@ -19,16 +19,18 @@ const Footer = () => {
             className="footer-logo"
           />
           <h4>Subscribe to our Newsletter</h4>
-          <p className="promotional-text">
-            We will send you sample promotional content here.
-          </p>
-          <div className="newsletter">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="newsletter-input"
-            />
-            <button className="subscribe-button">Subscribe</button>
+          <div className="newsletter-container">
+            <p className="promotional-text">
+              We will send you sample promotional content here.
+            </p>
+            <div className="newsletter">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="newsletter-input"
+              />
+              <button className="subscribe-button">Subscribe</button>
+            </div>
           </div>
         </div>
 
@@ -62,7 +64,7 @@ const Footer = () => {
           <h4>Company</h4>
           <ul className="footer-links">
             <li>
-              <a href="#Service">Service</a>
+              <a href="#service">Service</a>
             </li>
             <li>
               <a href="#team">Our Team</a>
@@ -71,7 +73,7 @@ const Footer = () => {
               <a href="#careers">Careers</a>
             </li>
             <li>
-              <a href="#blog">Pricing</a>
+              <a href="#pricing">Pricing</a>
             </li>
           </ul>
         </div>

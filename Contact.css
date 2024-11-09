@@ -126,7 +126,7 @@
   margin-left: auto;
   margin-right: 20px;
   scroll-margin-bottom: 20px;
-  margin-top: -25px; /* Ensures it is aligned at the top of its container */
+  margin-top: -17px; /* Ensures it is aligned at the top of its container */
 }
 .small-card h3 {
   font-size: 20px;

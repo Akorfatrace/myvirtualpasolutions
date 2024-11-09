@@ -1,15 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
-
+/* Footer base styling */
 .footer {
   background-color: white;
   color: rgb(46, 44, 44);
   padding: 20px 0;
   width: 100%;
   text-align: center;
-  font-family: "Raleway", sans-serif; /* Default font */
 }
 
 .footer-content {
@@ -27,19 +22,26 @@
   padding: 10px;
   box-sizing: border-box;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.footer-section h3,
-.footer-section h4 {
-  font-family: "Playfair Display", serif;
-  font-weight: 700;
+.footer-logo {
+  width: 100px;
+  height: auto;
   margin-bottom: 10px;
+  margin-top: -25px;
+}
+
+.footer-section h4 {
+  font-weight: 700;
+  margin-top: -20px;
   font-size: 16px;
   color: #284b64;
 }
 
 .promotional-text {
-  font-family: "Dancing Script", cursive !important;
   font-size: 16px;
   color: #284b64;
 }
@@ -62,39 +64,60 @@
   transition: color 0.3s;
   font-size: 13px;
 }
-.footer-section p {
-  font-family: "Raleway", sans-serif;
-  font-size: 13px;
-}
 
 .footer-links a:hover {
   color: #6772e5;
 }
 
+.newsletter-container {
+  display: flex;
+  flex-direction: column; /* Stacked vertically */
+  align-items: center;
+  gap: 10px;
+}
+
+.newsletter-container {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center;
+  gap: 1px; /* Space between the elements */
+  margin-top: 0; /* Remove any top margin */
+}
+
 .newsletter {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 10px;
+  flex-direction: column; /* Stack the input and button vertically */
+  align-items: center;
+  gap: 10px; /* Space between input and button */
+}
+
+.promotional-text {
+  font-size: 16px;
+  color: #284b64;
+  margin-bottom: 0; /* Remove bottom margin */
 }
 
 .newsletter-input {
-  padding: 5px;
+  padding: 8px;
   font-size: 14px;
-  margin-top: 5px;
-  width: 100%;
-  max-width: 200px;
-  border-color: #3d6e71;
+  width: 180px;
+  border: 1px solid #3d6e71;
+  border-radius: 4px;
+  color: #333;
+  margin-left: -60px; /* Ensure no space above input */
 }
 
 .subscribe-button {
-  padding: 5px 10px;
+  padding: 8px 12px;
   background-color: #284b64;
-  color: white;
+  color: #ffd9d8;
   border: none;
   cursor: pointer;
   font-size: 14px;
-  margin-top: 5px;
+  border-radius: 4px;
+  text-align: center;
+  margin-left: -150px;
+  margin-top: -5px;
 }
 
 .subscribe-button:hover {
@@ -139,11 +162,4 @@
   height: 1px;
   background: rgba(128, 128, 128, 0.5);
   margin: 5px 0;
-}
-
-.footer-logo {
-  width: 100px;
-  height: auto;
-  margin-bottom: 10px;
-  margin-top: -10px;
 }

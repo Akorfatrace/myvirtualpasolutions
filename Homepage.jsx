@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "./Homepage.css";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
   const images = [
@@ -58,24 +59,24 @@ const Homepage = () => {
           <p className="hero-subtitle">Your Success • Our Priority</p>
         </div>
       </div>
-
       <section className="intro-section" ref={introRef}>
-        <div className="text">
-          <h2>Achieve More with Professional Support You Can Trust</h2>
-          <p>
-            We provide reliable, streamlined solutions that empower busy
-            entrepreneurs and executives to focus on growth, leaving the details
-            to us.
-          </p>
+        <div className="text-wrapper">
+          <div className="text">
+            <div className="dash"></div> {/* Short horizontal line (dash) */}
+            <h3>Achieve More with Professional Support You Can Trust</h3>
+            <p>
+              We provide reliable, streamlined solutions that empower busy
+              entrepreneurs and executives to focus on growth, leaving the
+              details to us.
+            </p>
+            <Link to="/Contact" className="learn-more">
+              Get in Touch with Us
+              <span className="arrow-right">→</span>
+            </Link>
+          </div>
         </div>
-        <div className="card">
-          <img src="/images/card-image.jpg" alt="Card Image" />
-          <h3>Our Services</h3>
-          <p>
-            Explore a variety of professional services tailored to help you
-            achieve more with less effort.
-          </p>
-        </div>
+
+        <img src="public/images/virtual3.jpg" alt="Card Image" />
       </section>
 
       {/* Placeholder content section to see scrolling effect */}

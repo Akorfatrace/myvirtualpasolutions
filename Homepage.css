@@ -17,7 +17,6 @@
   flex-direction: column;
   align-items: center;
   height: 170vh; /* Make the background longer to show more of the image */
-
   transition: background-image 2s ease-in-out;
 }
 
@@ -61,64 +60,80 @@
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* Intro section to appear after hero fades */
+/* Intro section with semi-transparent pink background */
 .intro-section {
-  padding: 60px 20px;
-  background-color: #f9f9f9;
-  text-align: left; /* Align the text to the left */
-  margin-top: 0; /* Remove any top margin */
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 3s ease, transform 3s ease;
-  display: flex;
-  justify-content: space-between; /* Spread out text and card */
-  align-items: center;
-  height: 600px; /* Increase the height of the section */
-}
-
-/* Visible state of the intro section */
-.intro-section.visible {
+  padding: 60px 10vw; /* Adjust padding to move content inward from sides */
+  background-color: rgba(255, 217, 216, 0.25); /* 25% opacity pink background */
+  text-align: left;
+  margin-top: 0;
   opacity: 1;
   transform: translateY(0);
+  transition: opacity 1s ease, transform 1s ease;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center;
+  height: 600px;
+  gap: 5vw; /* Add spacing between text and image */
+}
+
+/* Text wrapper with max-width for better line wrapping */
+.intro-section .text-wrapper {
+  max-width: 50%; /* Adjust this as needed */
 }
 
 /* Styling for the text area */
 .intro-section .text {
-  max-width: 60%; /* Take up 60% of the width */
+  opacity: 0; /* Initially hidden */
+  transform: translateX(-50px); /* Start off-screen */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  max-width: 90%; /* Control max width to keep text in view */
 }
 
-.intro-section h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 20px;
+/* Make text visible when the section is in view */
+.intro-section.visible .text {
+  opacity: 1;
+  transform: translateX(0); /* Slide in from the left */
 }
 
-.intro-section p {
-  font-size: 1.2rem;
-  color: #666;
-  line-height: 1.6;
+/* Styling for the "Learn more" link */
+.learn-more {
+  margin-top: 60px;
+  font-size: 1rem;
+  color: #284b64;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.learn-more:hover {
+  color: #3d6e71; /* Optional hover color */
+}
+
+.learn-more .arrow-right {
+  margin-left: 8px;
+  font-size: 2rem; /* Make arrow slightly larger */
+  font-weight: bolder; /* Thicker appearance */
+  transform: scaleX(0.8); /* Shorten the arrow */
+  display: inline-block;
 }
 
 /* Card styling on the right side */
 .intro-section .card {
-  width: 30%; /* Make the card take up 30% of the width */
   background-color: #fff;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   text-align: center;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(50px); /* Start below */
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.intro-section .card h3 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #333;
-}
-
-.intro-section .card p {
-  font-size: 1rem;
-  color: #666;
+/* Make card visible when the section is in view */
+.intro-section.visible .card {
+  opacity: 1;
+  transform: translateY(0); /* Slide up */
 }
 
 /* Content section styling */
@@ -131,9 +146,9 @@
 }
 
 .content-section h3 {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 0px;
   color: #333;
 }
 
@@ -141,4 +156,31 @@
   font-size: 1rem;
   color: #666;
   margin: 15px 0;
+}
+
+/* Image styling for intro section */
+.intro-section img {
+  width: 50%; /* Adjust width for centering */
+  height: auto;
+  border-radius: 20px;
+}
+/* Specific styling for the "Achieve More" heading */
+.intro-section h3 {
+  color: #353535; /* Yellow color */
+  margin-top: 10px;
+}
+
+/* Specific styling for the "We provide" paragraph */
+.intro-section p {
+  color: #3d6e71; /* Blue color */
+  margin-top: 60px;
+}
+/* Add styling for the line above the "Achieve" text */
+.intro-section .dash {
+  width: 50px; /* Adjust width to control the length of the line */
+  height: 5px; /* Set the height of the line */
+  background-color: #3d6e71; /* Choose the color for the line */
+  margin-top: 40px;
+  margin-bottom: 30px; /* Adjust the spacing between the line and the "Achieve" text */
+  border-radius: 10px;
 }

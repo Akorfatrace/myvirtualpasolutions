@@ -1,0 +1,92 @@
+.services-container {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(61, 110, 113, 0.3);
+  height: 500px;
+}
+
+.services-carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.carousel-cards {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+}
+
+.carousel-card {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-card:hover {
+  transform: translateY(10px) scale(1.05); /* Shift down and scale up on hover */
+  outline: 3px solid hotpink; /* Bright pink outline */
+  box-shadow: 0 10px 20px rgba(255, 20, 147, 0.3); /* Pink shadow */
+}
+
+.carousel-button {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  margin: 0 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.indicator.active {
+  background-color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .carousel-cards {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .carousel-card {
+    max-width: 90%; /* Reduce width for mobile screens */
+  }
+
+  .carousel-button {
+    font-size: 1.5rem;
+  }
+}

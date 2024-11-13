@@ -3,6 +3,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ScrollToTop from "./ScrollToTop";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import Homepage from "../Homepage"; // Ensure the path is correct
 import Contact from "../Contact"; // Import the new Contact component

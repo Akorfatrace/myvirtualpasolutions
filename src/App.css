@@ -1,54 +1,61 @@
-/* styles.css */
-
 /* Reset body margin and prevent horizontal scrolling */
 html,
 body {
-  margin: 0; /* No margin on html and body */
-  padding: 0; /* No padding on html and body */
-  overflow-x: hidden; /* Prevent horizontal scroll */
-  width: 100%; /* Ensure full-width */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important; /* Prevent horizontal scrolling */
+  width: 100%; /* Ensure full width */
+  height: 100%; /* Ensure full height */
   box-sizing: border-box; /* Apply box-sizing to all elements */
+  min-width: 100%; /* Prevent body from being smaller than viewport */
 }
 
-/* Contact page specific styles */
-.contact-page {
-  background-image: url("/images/contact-background.png");
-  background-size: cover; /* Cover the entire area */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  width: 100vw; /* Fill the entire width */
-  height: 100vh; /* Fill the entire height */
-  display: flex; /* Use flexbox layout if needed */
-  flex-direction: column; /* Stack children vertically */
+/* Prevent horizontal scrolling on all elements */
+*,
+*::before,
+*::after {
+  box-sizing: inherit; /* Ensure all elements inherit the box-sizing */
+  overflow-x: hidden; /* Prevent overflow for all elements */
 }
 
-/* Additional styling for the form box */
-.form-box {
-  position: relative; /* Position relative to the parent */
-  top: 20px; /* Space between navbar and box */
-  left: 10%; /* Center horizontally */
-  height: 450px; /* Fixed height */
-  width: 800px; /* Fixed width */
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  border-radius: 10px; /* Rounded corners */
-  padding: 20px; /* Padding inside the box */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
-  margin: auto; /* Center the form box */
+/* Make sure elements do not cause overflow */
+.parallax-background,
+.hero,
+.intro-section,
+.service-section,
+.content-section {
+  width: 100%; /* Ensure full width */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  position: relative; /* Ensures any absolute/fixed elements stay within bounds */
+}
+
+/* Prevent images or media from overflowing */
+img,
+video {
+  max-width: 100%; /* Ensure media elements do not overflow */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Removes any inline-block margin issues */
+}
+
+/* Ensure content doesn't exceed the viewport width */
+.container,
+.wrapper,
+.main-content {
+  max-width: 100%; /* Prevent content from spilling beyond the viewport */
+  overflow-x: hidden; /* Ensure no content overflows */
 }
 
 /* Footer styling */
 .footer {
-  margin-top: auto; /* Ensure footer stays at the bottom */
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+  text-align: center;
+  position: relative; /* Ensures footer stays within bounds */
 }
 
-/* Hero section styling */
-.hero {
-  display: flex; /* Enable flexbox layout */
-  align-items: center; /* Center items vertically */
-  justify-content: space-between; /* Space between elements */
-  width: 100%; /* Full width of the viewport */
-  max-width: 1145px; /* Optional: max width for larger screens */
-  margin: 0 auto; /* Center the hero section horizontally */
-  padding: 20px; /* Internal padding */
-  height: 546px; /* Fixed height */
+/* Prevent horizontal scrolling on specific sections */
+section {
+  overflow-x: hidden; /* Prevent horizontal scrolling in all sections */
+  width: 100%; /* Ensure sections do not exceed viewport */
 }

@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "./Homepage.css";
 import { Link } from "react-router-dom";
+import Services from "./Services";
 
 const Homepage = () => {
   const images = [
@@ -32,13 +33,12 @@ const Homepage = () => {
         heroRef.current.style.transform = `translateY(${scrollY * -0.2}px)`;
       }
 
-      // Check visibility of the intro section
       if (introRef.current) {
         const rect = introRef.current.getBoundingClientRect();
         if (rect.top < window.innerHeight && rect.bottom >= 0) {
-          introRef.current.classList.add("visible"); // Add class to trigger animation
+          introRef.current.classList.add("visible");
         } else {
-          introRef.current.classList.remove("visible"); // Remove class if not in view
+          introRef.current.classList.remove("visible");
         }
       }
     };
@@ -59,6 +59,8 @@ const Homepage = () => {
           <p className="hero-subtitle">Your Success • Our Priority</p>
         </div>
       </div>
+      <Services />
+
       <section className="intro-section" ref={introRef}>
         <div className="text-wrapper">
           <div className="text">
@@ -73,6 +75,12 @@ const Homepage = () => {
               Get in Touch with Us
               <span className="arrow-right">→</span>
             </Link>
+            {/* Insert image below the cards */}
+            <img
+              src="/images/dottedImage.png"
+              alt="Decorative"
+              className="dotted-image"
+            />
           </div>
         </div>
 

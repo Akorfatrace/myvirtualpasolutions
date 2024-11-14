@@ -63,7 +63,7 @@
 /* Intro section with semi-transparent pink background */
 .intro-section {
   padding: 30px 10vw;
-  background-color: rgba(255, 217, 216, 0.25);
+  background-color: ffffff;
   text-align: left;
   margin-top: 0;
   opacity: 1;
@@ -139,10 +139,11 @@
 /* Content section styling */
 .content-section {
   padding: 40px 20px;
-  max-width: 800px;
+
   margin: 0 auto;
   color: #333;
   line-height: 1.6;
+  background-color: rgba(255, 217, 216, 0.4);
 }
 
 .content-section h3 {
@@ -158,11 +159,13 @@
   margin: 15px 0;
 }
 
-/* Image styling for intro section */
-.intro-section img {
-  width: 50%; /* Adjust width for centering */
-  height: auto;
-  border-radius: 20px;
+.intro-section video {
+  width: 50%; /* Adjust this as necessary */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px;
+  object-fit: cover;
+  display: block; /* Ensures the video is treated as a block-level element */
+  margin-top: 30px; /* Optional: Add spacing between the video and text/image */
 }
 
 /* Specific styling for the "Achieve More" heading */

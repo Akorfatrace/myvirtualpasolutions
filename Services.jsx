@@ -3,54 +3,53 @@ import "./Services.css";
 
 const Services = () => {
   const services = [
-    { title: "Inbox Management", description: "Description for Service 1" },
+    {
+      title: "Inbox Management",
+      description: "Organizing your inbox efficiently.",
+      hoverText: "Efficient email management for increased productivity.",
+    },
     {
       title: "Calendar Management",
-      description: "Description for Service 2",
+      description: "Scheduling appointments and reminders.",
+      hoverText: "Keep your appointments on track and never miss a meeting.",
     },
     {
       title: "Social Media Management",
-      description: "Description for Service 3",
+      description: "Handling posts and engagement.",
+      hoverText: "Grow your online presence with strategic content.",
     },
     {
       title: "Customer Service Care",
-      description: "Description for Service 4",
+      description: "Responding to customer inquiries.",
+      hoverText: "Providing timely responses and great customer service.",
     },
     {
       title: "Scheduling and Workflow Management",
-      description: "Description for Service 5",
+      description: "Optimizing task flows.",
+      hoverText: "Streamline your workflow for better efficiency.",
     },
     {
       title: "Automation and System Review",
-      description: "Description for Service 6",
+      description: "Streamlining repetitive tasks.",
+      hoverText: "Automate tasks and boost your productivity.",
     },
-    {
-      title: "Training and Research",
-      description: "Description for Service 7",
-    },
-    { title: "Service 8", description: "Description for Service 8" },
-    { title: "Service 9", description: "Description for Service 9" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Get the current set of three cards to display
-  const visibleCards = services.slice(currentIndex, currentIndex + 3);
+  const [nextIndex, setNextIndex] = useState(1);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex + 3 >= services.length ? 0 : prevIndex + 3
-    );
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % services.length);
+    setNextIndex((prevIndex) => (prevIndex + 1) % services.length);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex - 3 < 0 ? services.length - 3 : prevIndex - 3
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + services.length) % services.length
     );
-  };
-
-  const goToSet = (setIndex) => {
-    setCurrentIndex(setIndex * 3);
+    setNextIndex(
+      (prevIndex) => (prevIndex - 1 + services.length) % services.length
+    );
   };
 
   return (
@@ -69,12 +68,20 @@ const Services = () => {
           ←
         </button>
         <div className="carousel-cards">
-          {visibleCards.map((service, index) => (
-            <div className="carousel-card" key={index}>
-              <h4>{service.title}</h4>
-              <p>{service.description}</p>
+          <div className="carousel-card" key={currentIndex}>
+            <h4>{services[currentIndex].title}</h4>
+            <p>{services[currentIndex].description}</p>
+            <div className="hover-content">
+              <p>{services[currentIndex].hoverText}</p>
             </div>
-          ))}
+          </div>
+          <div className="carousel-card" key={nextIndex}>
+            <h4>{services[nextIndex].title}</h4>
+            <p>{services[nextIndex].description}</p>
+            <div className="hover-content">
+              <p>{services[nextIndex].hoverText}</p>
+            </div>
+          </div>
         </div>
         <button className="carousel-button right" onClick={nextSlide}>
           →
@@ -82,13 +89,14 @@ const Services = () => {
 
         {/* Carousel Indicators */}
         <div className="carousel-indicators">
-          {[0, 1, 2].map((setIndex) => (
+          {services.map((_, index) => (
             <span
-              key={setIndex}
-              className={`indicator ${
-                currentIndex === setIndex * 3 ? "active" : ""
-              }`}
-              onClick={() => goToSet(setIndex)}
+              key={index}
+              className={`indicator ${currentIndex === index ? "active" : ""}`}
+              onClick={() => {
+                setCurrentIndex(index);
+                setNextIndex((index + 1) % services.length);
+              }}
             />
           ))}
         </div>

@@ -1,8 +1,50 @@
 .services-container {
   text-align: center;
   padding: 20px;
-  background-color: rgba(61, 110, 113, 0.3);
-  height: 500px;
+  background-color: rgba(255, 217, 216, 0.18);
+  height: 550px;
+  border-bottom-left-radius: 120px;
+}
+
+.services-intro h5 {
+  background: linear-gradient(
+    135deg,
+    #284b64,
+    #3d6e71,
+    #f5a5c0,
+    /* Added pink trace */ #284b64
+  ); /* Gradient with blue and pink */
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 2.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.services-intro h6 {
+  font-size: 1.5rem;
+  color: black; /* Reverted text color to black */
+}
+
+.services-intro p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: black; /* Reverted text color to black */
+  margin-top: 20px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Add transition to text */
+.services-intro p {
+  opacity: 0;
+  animation: fadeInText 3s forwards 1s; /* Fade-in effect after some time */
+}
+
+/* Animation to make the text appear smoothly */
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
 }
 
 .services-carousel {
@@ -16,31 +58,80 @@
 
 .carousel-cards {
   display: flex;
-  gap: 20px;
+  gap: 80px;
   transition: transform 0.5s ease-in-out;
-  position: relative;
 }
 
 .carousel-card {
-  background-color: #f4f4f4;
+  background-color: #ffffff; /* White background for cards */
+  padding: 20px;
+  border-radius: 20px 10px 30px 10px; /* Mixed border-radius design */
+  width: 250px;
+  height: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  margin-top: 40px;
+}
+
+.carousel-card h4 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  z-index: 3;
+  background: linear-gradient(
+    135deg,
+    #284b64,
+    #3d6e71,
+    #f5a5c0,
+    /* Added pink trace to card headings */ #284b64
+  ); /* Gradient with blue and pink */
+  -webkit-background-clip: text;
+  color: transparent; /* Ensure text uses gradient */
+}
+
+.carousel-card p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  z-index: 3;
+  color: black; /* Reverted text color to black for contrast */
+}
+
+.carousel-card .hover-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(40, 75, 100, 0.1); /* Blue overlay */
+  backdrop-filter: blur(8px); /* Reduced blur for better control */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out; /* Smooth transition */
   padding: 20px;
   border-radius: 10px;
-  width: 100%;
-  max-width: 300px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1rem;
+  z-index: 3; /* Ensure it is above other elements */
+}
+
+.carousel-card:hover .hover-content {
+  opacity: 1; /* Show on hover */
+  backdrop-filter: blur(20px); /* Full blur on hover */
 }
 
 .carousel-card:hover {
-  transform: translateY(10px) scale(1.05); /* Shift down and scale up on hover */
-  outline: 3px solid hotpink; /* Bright pink outline */
-  box-shadow: 0 10px 20px rgba(255, 20, 147, 0.3); /* Pink shadow */
+  transform: translateY(10px) scale(1.05);
 }
 
 .carousel-button {
   background-color: transparent;
   border: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -60,12 +151,13 @@
   justify-content: center;
   margin-top: 20px;
   position: relative;
+  top: 20px;
 }
 
 .indicator {
-  width: 12px;
-  height: 12px;
-  margin: 0 8px;
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
   border-radius: 50%;
   background-color: #ccc;
   cursor: pointer;
@@ -73,20 +165,5 @@
 }
 
 .indicator.active {
-  background-color: #007bff;
-}
-
-@media (max-width: 768px) {
-  .carousel-cards {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .carousel-card {
-    max-width: 90%; /* Reduce width for mobile screens */
-  }
-
-  .carousel-button {
-    font-size: 1.5rem;
-  }
+  background-color: #007bff; /* Highlight active indicator */
 }

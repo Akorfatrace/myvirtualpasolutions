@@ -75,16 +75,27 @@ const Homepage = () => {
               Get in Touch with Us
               <span className="arrow-right">→</span>
             </Link>
-            {/* Insert image below the cards */}
-            <img
-              src="/images/dottedImage.png"
-              alt="Decorative"
-              className="dotted-image"
-            />
           </div>
+
+          {/* Dotted Image placed under text, aligned left */}
+          <img
+            src="/images/dottedImage.png"
+            alt="Decorative"
+            className="dotted-image"
+          />
         </div>
 
-        <img src="public/images/virtual3.jpg" alt="Card Image" />
+        <video
+          src="/images/virtualvideo.mp4" // Your video file path
+          alt="Card Video"
+          className="intro-video" // Ensure class name is set
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          Your browser does not support the video tag.
+        </video>
       </section>
 
       {/* Placeholder content section to see scrolling effect */}

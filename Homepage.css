@@ -159,13 +159,12 @@
   margin: 15px 0;
 }
 
-.intro-section video {
+.intro-section .intro-image {
   width: 50%; /* Adjust this as necessary */
   height: auto; /* Maintain aspect ratio */
-  border-radius: 5px;
+
   object-fit: cover;
-  display: block; /* Ensures the video is treated as a block-level element */
-  margin-top: 30px; /* Optional: Add spacing between the video and text/image */
+  display: block;
 }
 
 /* Specific styling for the "Achieve More" heading */

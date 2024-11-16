@@ -1,42 +1,36 @@
 .services-container {
   text-align: center;
   padding: 20px;
-  background-color: rgba(255, 217, 216, 0.18);
-  height: 550px;
-  border-bottom-left-radius: 120px;
-}
-
-.services-intro h5 {
   background: linear-gradient(
-    135deg,
-    #284b64,
-    #3d6e71,
-    #f5a5c0,
-    /* Added pink trace */ #284b64
-  ); /* Gradient with blue and pink */
-  -webkit-background-clip: text;
-  color: transparent;
-  font-size: 2.5rem;
-  font-weight: bold;
-  transition: all 0.3s ease-in-out;
+    to right,
+    rgba(255, 217, 216, 0.8),
+    /* Increased opacity */ rgba(40, 75, 100, 0.6) /* Light blue background */
+  );
+  height: 560px;
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4),
+    /* Bottom shadow */ 0 -4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.services-intro h6 {
-  font-size: 1.5rem;
-  color: black; /* Reverted text color to black */
+.services-intro h1 {
+  margin-top: 10px;
+  color: #353535;
+  transition: all 0.3s ease-in-out;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .services-intro p {
   font-size: 1rem;
   line-height: 1.5;
-  color: black; /* Reverted text color to black */
+  color: #353535; /* Darker text color for contrast */
   margin-top: 20px;
   transition: opacity 0.3s ease-in-out;
 }
 
 /* Add transition to text */
 .services-intro p {
-  opacity: 0;
+  opacity: 1;
   animation: fadeInText 3s forwards 1s; /* Fade-in effect after some time */
 }
 
@@ -58,16 +52,16 @@
 
 .carousel-cards {
   display: flex;
-  gap: 80px;
+  gap: 90px;
   transition: transform 0.5s ease-in-out;
 }
 
 .carousel-card {
-  background-color: #ffffff; /* White background for cards */
-  padding: 20px;
+  background-color: whitesmoke; /* White background for cards */
+  padding: 10px;
   border-radius: 20px 10px 30px 10px; /* Mixed border-radius design */
-  width: 250px;
-  height: 250px;
+  width: 310px;
+  height: 320px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
@@ -75,18 +69,19 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   position: relative;
-  margin-top: 40px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .carousel-card h4 {
-  font-size: 1.2rem;
-  margin: 10px 0;
+  font-size: 1.3rem;
+  margin: 40px 0;
   z-index: 3;
   background: linear-gradient(
     135deg,
     #284b64,
     #3d6e71,
-    #f5a5c0,
+    #f186aa,
     /* Added pink trace to card headings */ #284b64
   ); /* Gradient with blue and pink */
   -webkit-background-clip: text;
@@ -109,7 +104,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(40, 75, 100, 0.1); /* Blue overlay */
+  background: rgba(240, 199, 245, 0.2); /* Blue overlay */
   backdrop-filter: blur(8px); /* Reduced blur for better control */
   opacity: 0;
   transition: opacity 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out; /* Smooth transition */
@@ -129,13 +124,14 @@
 }
 
 .carousel-button {
-  background-color: transparent;
+  background-color: rgba(40, 75, 100, 0.3);
   border: none;
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  color: #ffffff;
 }
 
 .carousel-button.left {
@@ -159,11 +155,11 @@
   height: 10px;
   margin: 0 6px;
   border-radius: 50%;
-  background-color: #ccc;
+  background-color: #f7ebeb;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .indicator.active {
-  background-color: #007bff; /* Highlight active indicator */
+  background-color: #284b64; /* Highlight active indicator */
 }

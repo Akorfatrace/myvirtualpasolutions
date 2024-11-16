@@ -1,0 +1,88 @@
+/* virtualassistant.css */
+
+/* Pink background and heading styling */
+.virtual-assistant-section {
+  background-color: rgba(255, 217, 216, 0.2);
+  padding: 40px 0;
+  text-align: center;
+  border-bottom-left-radius: 150px;
+}
+
+.section-heading {
+  font-size: 2rem;
+  color: #284b64;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Container for the cards */
+.reasons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* Common styling for the cards */
+.reason-card {
+  display: flex;
+  gap: 120px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Image and text placement */
+.reason-card.left {
+  flex-direction: row;
+}
+
+.reason-card.right {
+  flex-direction: row-reverse;
+}
+
+/* Image styling */
+.reason-image-container {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.reason-image {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Text container */
+.reason-text-container {
+  max-width: 500px;
+}
+
+/* Text styling */
+.reason-text-container h4 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #284b64;
+}
+
+.reason-text-container p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .reason-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .reason-image {
+    width: 100%;
+    max-width: 400px;
+  }
+}

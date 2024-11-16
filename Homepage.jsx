@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import "./Homepage.css";
 import { Link } from "react-router-dom";
 import Services from "./Services";
+import VirtualAssistant from "./VirtualAssistant";
 
 const Homepage = () => {
   const images = [
@@ -85,40 +86,13 @@ const Homepage = () => {
           />
         </div>
 
-        <video
-          src="/images/virtualvideo.mp4" // Your video file path
-          alt="Card Video"
-          className="intro-video" // Ensure class name is set
-          autoPlay
-          loop
-          muted
-          playsInline
-        >
-          Your browser does not support the video tag.
-        </video>
+        <img
+          src="/images/virtual1.jpg" // Path to your image
+          alt="Card Image"
+          className="intro-image" // Ensure class name is set
+        />
       </section>
-
-      {/* Placeholder content section to see scrolling effect */}
-      <section className="content-section">
-        <h3>Our Approach</h3>
-        <p>
-          At our company, we believe in providing personalized support to help
-          you achieve your goals. Our team works closely with clients,
-          understanding their unique needs to deliver efficient solutions.
-        </p>
-        <p>
-          From strategic planning to hands-on support, we offer a full range of
-          services designed to make your work life easier and more productive.
-          With our expertise, you can focus on growing your business with
-          confidence.
-        </p>
-        <h3>Why Choose Us</h3>
-        <p>
-          We are committed to excellence, delivering results that drive success
-          for our clients. Our reputation for quality support speaks for itself,
-          and we are here to ensure you achieve remarkable outcomes.
-        </p>
-      </section>
+      <VirtualAssistant />
 
       <Footer />
     </>

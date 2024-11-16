@@ -3,13 +3,12 @@
   padding: 20px;
   background: linear-gradient(
     to right,
-    rgba(255, 217, 216, 0.8),
-    /* Increased opacity */ rgba(40, 75, 100, 0.6) /* Light blue background */
+    rgba(255, 217, 216, 0.6),
+    /* Increased opacity */ rgba(40, 75, 100, 0.2) /* Light blue background */
   );
   height: 560px;
 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4),
-    /* Bottom shadow */ 0 -4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .services-intro h1 {
@@ -62,7 +61,7 @@
   border-radius: 20px 10px 30px 10px; /* Mixed border-radius design */
   width: 310px;
   height: 320px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: center;

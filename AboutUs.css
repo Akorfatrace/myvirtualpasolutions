@@ -42,22 +42,3 @@
   font-size: 1.2rem; /* Paragraph font size */
   color: #555555; /* Medium gray text */
 }
-
-/* Second Section: Blue Background */
-.blue-section {
-  background-color: #007bff; /* Blue background */
-  width: 100vw; /* Full width of the viewport */
-  padding: 50px 20px; /* Padding for spacing */
-  text-align: center; /* Center align the text */
-  color: #ffffff; /* White text for contrast */
-  box-sizing: border-box; /* Include padding in width calculation */
-}
-
-.blue-section h2 {
-  font-size: 2rem; /* Heading size */
-  margin-bottom: 20px;
-}
-
-.blue-section p {
-  font-size: 1.2rem; /* Paragraph font size */
-}

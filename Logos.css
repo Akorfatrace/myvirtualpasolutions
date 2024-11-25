@@ -1,0 +1,19 @@
+.logos-section {
+  background-color: #284b64; /* Light background color */
+  width: 100%; /* Ensure it spans the full width */
+  padding: 20px 0; /* Adjusted padding for smaller height */
+  text-align: center;
+}
+
+.logos-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  max-width: 150px;
+  height: auto;
+  margin: 10px;
+}

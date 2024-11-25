@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import Homepage from "../Homepage"; // Ensure the path is correct
 import Contact from "../Contact"; // Import the new Contact component
+import AboutUs from "../AboutUs";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />{" "}
         {/* Add the new route */}
       </Routes>

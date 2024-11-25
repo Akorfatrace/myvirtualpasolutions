@@ -1,16 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Quicksand:wght@400;700&family=Raleway:wght@400;700&display=swap");
 .navbar {
+  font-family: "Quicksand", sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px 20px; /* Reduced padding to reduce vertical height */
-  background: #ffffff; /* Gradient from white to light pink */
+  background: linear-gradient(
+    to right,
+    #ffffff 30%,
+    #f3cecd 95%
+  ); /* White dominates, subtle pink and teal to the right */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   width: 100%;
   max-width: 1200px;
   margin: 20px auto 0; /* Added margin-top to give space at the top */
 }
-
 .navbar-logo img {
   height: 45px; /* Adjusted logo size to fit better */
 }

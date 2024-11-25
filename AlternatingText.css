@@ -1,0 +1,44 @@
+.alternating-text {
+  font-size: 16px; /* Reduced font size */
+  font-family: "Raleway", sans-serif;
+  font-weight: 200; /* Adjusted weight for better readability */
+  text-align: center;
+  padding: 20px 10px; /* Reduced padding */
+  color: #353535;
+  width: 100%; /* Full width */
+  height: 47px; /* Reduced height */
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    to right,
+    rgba(255, 217, 216, 0.6),
+    rgba(40, 75, 100, 0.4)
+  );
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.alternating-text * {
+  border-radius: 0; /* Apply to all child elements to ensure no border-radius */
+}
+
+.tagline {
+  opacity: 0;
+  transform: translateY(20px); /* Initial position for slide effect */
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+/* Fade-out effect */
+.fade-out {
+  opacity: 0;
+  transform: translateY(-20px); /* Slide out upwards */
+}
+
+/* Fade-in effect */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0); /* Slide into view */
+}

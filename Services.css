@@ -1,19 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Quicksand:wght@400;700&family=Raleway:wght@400;700&display=swap");
+
 .services-container {
+  font-family: "Raleway", sans-serif;
   text-align: center;
   padding: 20px;
   background: linear-gradient(
     to right,
-    rgba(255, 217, 216, 0.6),
-    /* Increased opacity */ rgba(40, 75, 100, 0.2) /* Light blue background */
+    rgba(255, 192, 203, 0.2),
+    /* Light pink */ rgba(173, 216, 230, 0.2) /* Light blue */
   );
   height: 560px;
-
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 10px; /* Optional: adds smooth corners */
 }
 
 .services-intro h1 {
+  font-family: "Quicksand", sans-serif;
   margin-top: 10px;
-  color: #353535;
+  color: #284b64;
   transition: all 0.3s ease-in-out;
   font-size: 2rem;
   font-weight: bold;
@@ -56,7 +59,7 @@
 }
 
 .carousel-card {
-  background-color: whitesmoke; /* White background for cards */
+  background-color: rgb(255, 255, 255); /* White background for cards */
   padding: 10px;
   border-radius: 20px 10px 30px 10px; /* Mixed border-radius design */
   width: 310px;
@@ -73,9 +76,10 @@
 }
 
 .carousel-card h4 {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   margin: 40px 0;
   z-index: 3;
+  font-family: "Cookie", cursive;
   background: linear-gradient(
     135deg,
     #284b64,
@@ -103,7 +107,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(240, 199, 245, 0.2); /* Blue overlay */
+  background: rgba(240, 199, 245, 0); /* Blue overlay */
   backdrop-filter: blur(8px); /* Reduced blur for better control */
   opacity: 0;
   transition: opacity 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out; /* Smooth transition */
@@ -115,7 +119,7 @@
 
 .carousel-card:hover .hover-content {
   opacity: 1; /* Show on hover */
-  backdrop-filter: blur(20px); /* Full blur on hover */
+  backdrop-filter: blur(120px); /* Full blur on hover */
 }
 
 .carousel-card:hover {
@@ -154,7 +158,7 @@
   height: 10px;
   margin: 0 6px;
   border-radius: 50%;
-  background-color: #f7ebeb;
+  background-color: #e0d9d9;
   cursor: pointer;
   transition: background-color 0.3s;
 }

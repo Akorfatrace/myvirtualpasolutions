@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Quicksand:wght@400;700&family=Raleway:wght@400;700&display=swap");
+
 /* Footer base styling */
 .footer {
   background-color: white;
@@ -5,6 +7,7 @@
   padding: 40px 0;
   width: 100%;
   text-align: center;
+  font-family: "Raleway", sans-serif;
 }
 
 .footer-content {
@@ -30,18 +33,14 @@
 .footer-logo {
   width: 100px;
   height: auto;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   margin-top: -25px;
 }
 
 .footer-section h4 {
+  font-family: "Quicksand", sans-serif;
   font-weight: 700;
   margin-top: -20px;
-  font-size: 16px;
-  color: #284b64;
-}
-
-.promotional-text {
   font-size: 16px;
   color: #284b64;
 }
@@ -92,7 +91,8 @@
 }
 
 .promotional-text {
-  font-size: 16px;
+  font-family: "Cookie", cursive;
+  font-size: 20px;
   color: #284b64;
   margin-bottom: 0; /* Remove bottom margin */
 }
@@ -103,7 +103,7 @@
   width: 180px;
   border: 1px solid #3d6e71;
   border-radius: 4px;
-  color: #333;
+  color: #353535;
   margin-left: -60px; /* Ensure no space above input */
 }
 
@@ -113,11 +113,12 @@
   color: #ffd9d8;
   border: none;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 22px;
   border-radius: 4px;
   text-align: center;
   margin-left: -150px;
   margin-top: -5px;
+  font-family: "Cookie", cursive;
 }
 
 .subscribe-button:hover {
@@ -154,12 +155,19 @@
 }
 
 .footer-bottom {
+  font-family: "Cookie", cursive;
   margin-top: 15px;
-  font-size: 12px;
+  font-size: 22px;
+  color: #353535;
 }
 
 .ash-line {
   height: 1px;
   background: rgba(128, 128, 128, 0.5);
   margin: 5px 0;
+}
+.contact-text {
+  font-size: 14px;
+  color: #353535;
+  margin-bottom: 10px; /* Add spacing if needed */
 }

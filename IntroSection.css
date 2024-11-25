@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Quicksand:wght@400;700&family=Raleway:wght@400;700&display=swap");
+
+.intro-section {
+  font-family: "Raleway", sans-serif;
+  padding: 30px 10vw;
+  background-color: #ffffff;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 530px;
+  gap: 5vw;
+}
+
+.intro-section .text-wrapper {
+  max-width: 50%;
+  margin-top: -120px;
+}
+
+.intro-section .text {
+  opacity: 0;
+  transform: translateX(-50px); /* Start off-screen to the left */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  max-width: 90%;
+  padding-top: 65px;
+}
+
+.intro-section.visible .text {
+  opacity: 1;
+  transform: translateX(0); /* Move into place */
+}
+
+.learn-more {
+  font-family: "Cookie", cursive;
+  margin-top: 30px;
+  font-size: 1.5rem;
+  color: #284b64;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.learn-more:hover {
+  color: #3d6e71;
+}
+
+.learn-more .arrow-right {
+  margin-left: 8px;
+  font-size: 2rem;
+  font-weight: bolder;
+  transform: scaleX(0.8);
+  display: inline-block;
+}
+
+.intro-section .dotted-image {
+  width: 50%;
+  max-width: 120px;
+  height: auto;
+  margin-bottom: -105px;
+  margin-top: 50px;
+}
+
+.intro-section .intro-image {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.intro-section h3 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  color: #284b64;
+  opacity: 0;
+  transform: translateX(-50px); /* Start off-screen to the left */
+  transition: opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s; /* Delayed to sequence after the text */
+}
+
+.intro-section.visible h3 {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.intro-section p {
+  color: #353535;
+  margin-top: 60px;
+  opacity: 0;
+  transform: translateX(-50px); /* Start off-screen to the left */
+  transition: opacity 0.6s ease 0.4s, transform 0.6s ease 0.4s; /* Further delay for sequential animation */
+}
+
+.intro-section.visible p {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.intro-section .dash {
+  width: 50px;
+  height: 5px;
+  background-color: #284b64;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateX(-50px); /* Start off-screen to the left */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.intro-section.visible .dash {
+  opacity: 1;
+  transform: translateX(0);
+}

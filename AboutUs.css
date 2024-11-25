@@ -1,0 +1,63 @@
+/* General styling for the About Us page */
+.about-us-page {
+  background-color: #ffffff; /* White background for the page */
+  display: flex;
+  flex-direction: column; /* Stack sections vertically */
+  justify-content: flex-start; /* Align content to the top */
+  align-items: center; /* Center content horizontally */
+  min-height: 100vh; /* Full height of the page */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Navbar Styling */
+.navbar {
+  width: 100%; /* Full-width navbar */
+  max-width: 1200px; /* Set a max width for the navbar */
+  position: absolute; /* Position navbar at the top */
+  top: 0;
+  left: 50%; /* Start positioning from the center */
+  transform: translateX(-50%); /* Center the navbar */
+}
+
+/* First Section: Why Us? */
+.why-us-section {
+  margin-top: 60px;
+  background-color: #ffffff; /* White background */
+  width: 100vw; /* Full width of the viewport */
+  padding: 50px 20px; /* Padding for spacing */
+  text-align: center; /* Center align the text */
+  border-bottom: 2px solid #e0e0e0; /* Optional: Separator line */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.why-us-section h1 {
+  font-size: 2.5rem; /* Large heading */
+  color: #333333; /* Dark text color */
+  margin-bottom: 20px;
+}
+
+.why-us-section p {
+  font-size: 1.2rem; /* Paragraph font size */
+  color: #555555; /* Medium gray text */
+}
+
+/* Second Section: Blue Background */
+.blue-section {
+  background-color: #007bff; /* Blue background */
+  width: 100vw; /* Full width of the viewport */
+  padding: 50px 20px; /* Padding for spacing */
+  text-align: center; /* Center align the text */
+  color: #ffffff; /* White text for contrast */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.blue-section h2 {
+  font-size: 2rem; /* Heading size */
+  margin-bottom: 20px;
+}
+
+.blue-section p {
+  font-size: 1.2rem; /* Paragraph font size */
+}

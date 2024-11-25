@@ -21,7 +21,8 @@ const Footer = () => {
           <h4>Subscribe to our Newsletter</h4>
           <div className="newsletter-container">
             <p className="promotional-text">
-              We will send you sample promotional content here.
+              Get the latest updates, news, and special offers straight to your
+              inbox!
             </p>
             <div className="newsletter">
               <input
@@ -39,22 +40,22 @@ const Footer = () => {
           <h4>Services</h4>
           <ul className="footer-links">
             <li>
-              <a href="#email">Email Management</a>
-            </li>
-            <li>
-              <a href="#appointment">Appointment Scheduling</a>
-            </li>
-            <li>
               <a href="#socialmedia">Social Media Management</a>
             </li>
             <li>
-              <a href="#data">Data Entry</a>
+              <a href="#calendar">Calendar Management</a>
             </li>
             <li>
-              <a href="#customersupport">Customer Support</a>
+              <a href="#inboxmanagement">Inbox Management</a>
             </li>
             <li>
-              <a href="#travel">Travel Arrangements</a>
+              <a href="#customerservice">Customer Service Care</a>
+            </li>
+            <li>
+              <a href="#workflow">Automation and System Review</a>
+            </li>
+            <li>
+              <a href="#training">Training and Research</a>
             </li>
           </ul>
         </div>
@@ -64,16 +65,16 @@ const Footer = () => {
           <h4>Company</h4>
           <ul className="footer-links">
             <li>
-              <a href="#service">Service</a>
+              <a href="#service">Services</a>
             </li>
             <li>
               <a href="#team">Our Team</a>
             </li>
             <li>
-              <a href="#careers">Careers</a>
+              <a href="#partners">Our Partners</a>
             </li>
             <li>
-              <a href="#pricing">Pricing</a>
+              <a href="#pricing">Get a Quote</a>
             </li>
           </ul>
         </div>
@@ -81,8 +82,11 @@ const Footer = () => {
         {/* Fourth Section: Contact Us */}
         <div className="footer-section">
           <h4>Contact Us</h4>
-          <p>Feel free to reach out!</p>
-          <p>Phone: (123) 456-7890</p>
+          <p className="contact-text">
+            Have questions? Fill out our Contact Form, call us, or connect with
+            us online!
+          </p>
+          <p>Phone: (+233) 024-086-7772</p>
           <div className="social-icons">
             <div className="social-icon">
               <FaFacebookF />

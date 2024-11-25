@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Quicksand:wght@400;700&family=Raleway:wght@400;700&display=swap");
+
 /* Pink background and heading styling */
 .virtual-assistant-section {
   background-color: rgba(255, 217, 216, 0.2);
@@ -7,6 +10,7 @@
 }
 
 .section-heading {
+  font-family: "Quicksand", sans-serif; /* Quicksand font */
   font-size: 2rem;
   color: #284b64;
   margin-bottom: 30px;
@@ -70,19 +74,21 @@
 
 /* Text container */
 .reason-text-container {
-  max-width: 500px;
+  max-width: 490px;
 }
 
 /* Text styling */
 .reason-text-container h4 {
-  font-size: 1.6rem;
+  font-family: "Cookie", cursive; /* Cookie font */
+  font-size: 2.7rem;
   margin-bottom: 10px;
   color: #284b64;
 }
 
 .reason-text-container p {
+  font-family: "Raleway", sans-serif; /* Raleway font */
   font-size: 1rem;
-  color: #555;
+  color: #353535;
 }
 
 /* Responsive adjustments */

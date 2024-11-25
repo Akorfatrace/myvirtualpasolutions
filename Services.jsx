@@ -65,7 +65,7 @@ const Services = () => {
   };
 
   return (
-    <div className="services-container">
+    <div className="services-container" id="services">
       <div className="services-intro">
         <h1>Our Services</h1>
         <p>Simplifying Business, Amplifying Impact.</p>

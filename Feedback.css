@@ -1,0 +1,137 @@
+/* General styling for the testimonial section */
+.feedback-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: rgba(255, 217, 216, 0.2);
+  height: 500px;
+}
+
+.line {
+  border-top: 2px;
+  margin: 0 auto;
+  width: 70px; /* Dash width */
+  height: 5px; /* Dash height */
+  background-color: #284b64; /* Dash color */
+  margin-bottom: 20px; /* Add spacing below */
+  border-radius: 10px;
+}
+
+.heading {
+  font-family: "Quicksand", sans-serif;
+  color: #284664;
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-top: 20px;
+}
+
+.testimonial {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  height: 250px; /* Set fixed height for smooth animation */
+  flex-grow: 1; /* Allow the testimonial to grow and fill more space */
+}
+
+.quote {
+  position: relative;
+  font-size: 1.8rem;
+  font-family: "Cookie", sans-serif;
+  font-weight: 200;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0; /* Initially hidden */
+  transform: translateX(100%); /* Initially off-screen to the right */
+  animation: slideInFromLeft 1s ease-out forwards; /* Slide-in animation */
+}
+
+.quote-icon-left,
+.quote-icon-right {
+  font-size: 4rem; /* Adjusted size of the quotation marks */
+  position: absolute;
+  color: #d7d8d8;
+}
+
+.quote-icon-left {
+  top: -25px;
+  left: -30px;
+}
+
+.quote-icon-right {
+  bottom: -25px;
+  right: -30px;
+}
+
+.feedback-text {
+  margin: 0;
+  padding: 20px;
+  font-weight: bold;
+}
+
+/* Animation for testimonial info (name, role, rating) */
+.testimonial-info {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0; /* Initially hidden */
+  transform: translateX(100%); /* Initially off-screen */
+  animation: slideInFromLeft 1s ease-out forwards; /* Slide-in animation */
+  animation-delay: 1s; /* Delay for the text animation */
+}
+
+.rating {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.star {
+  color: #f39c12; /* Gold color for stars */
+}
+
+.person-info {
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  transform: translateX(100%); /* Initially off-screen */
+  animation: slideInFromLeft 1s ease-out forwards; /* Slide-in animation */
+  animation-delay: 1.5s; /* Delay slightly longer for name/role */
+}
+
+.name {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.role {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Slide-out animation for current testimonial */
+@keyframes slideOutToLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%); /* Slide out to the left */
+  }
+}
+
+/* Slide-in animation for new testimonial */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100%); /* Start off-screen to the right */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Move into position */
+  }
+}

@@ -45,17 +45,21 @@ html {
 
 /* Hero Text Styles */
 .hero-title {
-  font-size: 6rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 7rem;
   font-weight: bolder;
   margin: 0;
+  background: linear-gradient(to right, #ffd9d8, #ffffff);
+  -webkit-background-clip: text; /* Ensures the background applies to text */
+  -webkit-text-fill-color: transparent; /* Makes text transparent */
+  text-fill-color: transparent; /* Fallback for other browsers */
   opacity: 1;
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .hero-subtitle {
-  font-family: "Cookie", cursive;
-  font-size: 2.5rem;
-  font-weight: 300;
+  font-size: 1.6rem;
+  font-weight: 100;
   margin-top: 10px;
   opacity: 1;
   transition: opacity 0.5s ease, transform 0.5s ease;

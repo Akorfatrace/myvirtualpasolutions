@@ -14,7 +14,7 @@ const Footer = () => {
         {/* First Section: Logo and Newsletter */}
         <div className="footer-section">
           <img
-            src="/public/images/logoA.png"
+            src="/public/images/mvpa.png"
             alt="Logo"
             className="footer-logo"
           />

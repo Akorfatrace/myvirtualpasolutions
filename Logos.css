@@ -1,10 +1,16 @@
+/* Gradient Background */
 .logos-section {
-  background-color: #284b64; /* Light background color */
-  width: 100%; /* Ensure it spans the full width */
-  padding: 20px 0; /* Adjusted padding for smaller height */
+  background: linear-gradient(
+    135deg,
+    #1f3a52,
+    #284b64
+  ); /* Gradient background */
+  width: 100%; /* Full width */
+  padding: px 0; /* Adjusted padding */
   text-align: center;
 }
 
+/* Flexbox Container */
 .logos-container {
   display: flex;
   justify-content: center;
@@ -12,8 +18,31 @@
   flex-wrap: wrap;
 }
 
+/* Logo Styling */
 .logo {
-  max-width: 150px;
-  height: auto;
+  max-width: 120px; /* Adjusted size */
+  height: auto; /* Maintain aspect ratio */
   margin: 10px;
+  transition: transform 0.3s ease; /* Smooth transition for hover effects */
+  animation: float 4s ease-in-out infinite; /* Subtle floating animation */
+  outline: none; /* Remove any outline (for focus state) */
+  border: none; /* Remove any border */
+  box-shadow: none; /* Remove any box shadow */
+}
+
+/* Hover Effect */
+.logo:hover {
+  transform: scale(1.1); /* Slight enlargement on hover */
+  box-shadow: none; /* Ensure no shadow appears on hover */
+}
+
+/* Subtle Floating Animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0); /* Start and end at the same position */
+  }
+  50% {
+    transform: translateY(-5px); /* Slight upward movement */
+  }
 }

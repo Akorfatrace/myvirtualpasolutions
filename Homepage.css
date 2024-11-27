@@ -46,8 +46,8 @@ html {
 /* Hero Text Styles */
 .hero-title {
   font-family: "Raleway", sans-serif;
-  font-size: 7rem;
-  font-weight: bolder;
+  font-size: 6rem;
+  font-weight: bold;
   margin: 0;
   background: linear-gradient(to right, #ffd9d8, #ffffff);
   -webkit-background-clip: text; /* Ensures the background applies to text */
@@ -69,4 +69,27 @@ html {
 .hero-overlay.hidden {
   opacity: 0;
   transform: translateY(-50px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  /* Parallax Background */
+  .parallax-background {
+    min-height: 100vh; /* Adjust for mobile */
+  }
+
+  /* Hero Overlay */
+  .hero-overlay {
+    height: 120vh; /* Smaller height for mobile screens */
+  }
+
+  /* Hero Title */
+  .hero-title {
+    font-size: 3.5rem; /* Scale down title size */
+  }
+
+  /* Hero Subtitle */
+  .hero-subtitle {
+    font-size: 1.2rem; /* Scale subtitle size */
+  }
 }

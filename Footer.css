@@ -27,14 +27,16 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: flex-start; /* Align everything to the left */
+  gap: 15px; /* Space between elements */
 }
 
 .footer-logo {
-  width: 100px;
-  height: auto;
-  margin-bottom: 20px;
-  margin-top: -25px;
+  width: 100px; /* Adjust logo size for larger screens */
+  margin-top: 0; /* Remove any extra margin */
+  margin-left: 0; /* Align logo to the left */
+  margin-bottom: 10px;
+  transform: translateY(-15px);
 }
 
 .footer-section h4 {
@@ -70,31 +72,9 @@
 
 .newsletter-container {
   display: flex;
-  flex-direction: column; /* Stacked vertically */
-  align-items: center;
-  gap: 10px;
-}
-
-.newsletter-container {
-  display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  align-items: center;
-  gap: 1px; /* Space between the elements */
-  margin-top: 0; /* Remove any top margin */
-}
-
-.newsletter {
-  display: flex;
-  flex-direction: column; /* Stack the input and button vertically */
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start; /* Align input and button to the left */
   gap: 10px; /* Space between input and button */
-}
-
-.promotional-text {
-  font-family: "Cookie", cursive;
-  font-size: 20px;
-  color: #284b64;
-  margin-bottom: 0; /* Remove bottom margin */
 }
 
 .newsletter-input {
@@ -104,25 +84,28 @@
   border: 1px solid #3d6e71;
   border-radius: 4px;
   color: #353535;
-  margin-left: -60px; /* Ensure no space above input */
+  margin-left: 0; /* Align input to the left */
 }
 
 .subscribe-button {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
   padding: 8px 12px;
   background-color: #284b64;
   color: #ffd9d8;
   border: none;
   cursor: pointer;
-  font-size: 22px;
-  border-radius: 4px;
+  font-size: 14px;
+  border-radius: 8px;
   text-align: center;
-  margin-left: -150px;
-  margin-top: -5px;
-  font-family: "Cookie", cursive;
+  margin-left: 0; /* Align button to the left */
 }
 
-.subscribe-button:hover {
-  background-color: #3d6e71;
+.promotional-text {
+  font-family: "Cookie", cursive;
+  font-size: 20px;
+  color: #284b64;
+  margin-bottom: 0; /* Remove bottom margin */
 }
 
 .social-icons {
@@ -157,8 +140,8 @@
 .footer-bottom {
   font-family: "Cookie", cursive;
   margin-top: 15px;
-  font-size: 22px;
-  color: #353535;
+  font-size: 20px;
+  color: #284b64;
 }
 
 .ash-line {
@@ -166,8 +149,47 @@
   background: rgba(128, 128, 128, 0.5);
   margin: 5px 0;
 }
+
 .contact-text {
   font-size: 14px;
   color: #353535;
   margin-bottom: 10px; /* Add spacing if needed */
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    gap: 20px; /* Adjust gap for mobile screens */
+  }
+
+  .footer-logo {
+    width: 100px; /* Adjust logo size for smaller screens */
+  }
+
+  .newsletter-container {
+    align-items: center; /* Center elements on smaller screens */
+  }
+
+  .newsletter-input {
+    width: 100%; /* Make input take full width on mobile */
+    max-width: 180px; /* Limit max-width */
+    margin-left: 0; /* Remove any margin for better alignment */
+  }
+
+  .subscribe-button {
+    width: 100%; /* Make button take full width on mobile */
+    max-width: 180px; /* Limit max-width */
+  }
+
+  .social-icons {
+    justify-content: center; /* Center the social icons on mobile */
+    margin-top: 40px;
+  }
 }

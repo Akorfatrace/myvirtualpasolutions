@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll"; // Import react-scroll
 import "./Navbar.css";
@@ -6,18 +6,35 @@ import "./Navbar.css";
 const Navbar = () => {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState("/");
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage hamburger menu toggle
 
   useEffect(() => {
     setActiveLink(location.pathname);
   }, [location]);
+
+  // Function to toggle the menu
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <nav className="navbar">
       <div className="navbar-logo">
         <img src="public/images/mvpa.png" alt="Logo" className="logo" />
       </div>
-      <ul className="navbar-links">
-        {/* Home */}
+
+      {/* Hamburger Icon */}
+      <div
+        className={`hamburger ${isMenuOpen ? "active" : ""}`}
+        onClick={toggleMenu}
+      >
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      {/* Navbar Links */}
+      <ul className={`navbar-links ${isMenuOpen ? "active" : ""}`}>
         <li>
           <Link to="/" className={activeLink === "/" ? "active" : ""}>
             Home

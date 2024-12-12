@@ -6,7 +6,7 @@
     #284b64
   ); /* Gradient background */
   width: 100%; /* Full width */
-  padding: px 0; /* Adjusted padding */
+  padding: 40px 20px; /* Adjusted padding */
   text-align: center;
 }
 
@@ -16,6 +16,7 @@
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
+  justify-content: space-evenly; /* To ensure logos are evenly spaced */
 }
 
 /* Logo Styling */
@@ -44,5 +45,48 @@
   }
   50% {
     transform: translateY(-5px); /* Slight upward movement */
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .logos-section {
+    padding: 30px 15px; /* Adjust padding for medium screens */
+  }
+
+  .logo {
+    max-width: 100px; /* Reduce logo size */
+  }
+
+  .logos-container {
+    gap: 20px; /* Slightly reduce the gap between logos */
+  }
+}
+
+@media (max-width: 768px) {
+  .logos-section {
+    padding: 20px 10px; /* Reduce padding for smaller screens */
+  }
+
+  .logo {
+    max-width: 80px; /* Further reduce logo size */
+  }
+
+  .logos-container {
+    gap: 15px; /* Smaller gap between logos */
+  }
+}
+
+@media (max-width: 480px) {
+  .logos-section {
+    padding: 15px 5px; /* Minimal padding for small screens */
+  }
+
+  .logo {
+    max-width: 70px; /* Further reduce logo size */
+  }
+
+  .logos-container {
+    gap: 10px; /* Reduce gap further */
   }
 }

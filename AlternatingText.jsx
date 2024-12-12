@@ -3,9 +3,9 @@ import "./AlternatingText.css";
 
 const AlternatingText = () => {
   const taglines = [
-    "Our services start from as little as $100 per month.",
-    "Sign up for our newsletter and be part of our growing community.",
-    "Our solutions are designed to empower your growth and streamline operations.",
+    "Our services start from as little as $100 per month",
+    "Sign up for our newsletter and be part of our growing community",
+    "Our solutions are designed to empower your growth and streamline operations",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

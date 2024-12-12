@@ -1,15 +1,39 @@
-import React from "react";
-import "./Footer.css";
+import React, { useState, useEffect, useRef } from "react";
 import {
   FaFacebookF,
   FaInstagram,
   FaTwitter,
   FaLinkedinIn,
 } from "react-icons/fa";
+import "./Footer.css";
 
 const Footer = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const footerRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (footerRef.current) {
+      observer.observe(footerRef.current);
+    }
+
+    return () => {
+      if (footerRef.current) {
+        observer.unobserve(footerRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <footer className="footer">
+    <footer ref={footerRef} className={`footer ${isVisible ? "slide-up" : ""}`}>
       <div className="footer-content">
         {/* First Section: Logo and Newsletter */}
         <div className="footer-section">

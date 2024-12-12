@@ -92,3 +92,69 @@
     transform: translateY(0);
   }
 }
+
+/* Responsive Adjustments */
+
+/* For screens between 1024px and 768px */
+@media (max-width: 1024px) {
+  .about-intro {
+    padding: 60px 20px; /* Reduce padding for smaller screens */
+    gap: 30px; /* Reduce gap between elements */
+  }
+
+  .big-title {
+    font-size: 1.8rem; /* Slightly smaller titles for medium screens */
+  }
+
+  .intro-box {
+    margin-top: 20px; /* Reduce top margin for boxes */
+  }
+
+  .image-box img {
+    max-width: 350px; /* Adjust image size */
+  }
+}
+
+/* For smaller screens like tablets */
+@media (max-width: 768px) {
+  .about-intro {
+    padding: 40px 10px; /* Further reduce padding */
+    gap: 20px; /* Smaller gap between elements */
+  }
+
+  .big-title {
+    font-size: 1.5rem; /* Further reduce font size */
+  }
+
+  .intro-box {
+    margin-top: 15px; /* Further reduce margin */
+  }
+
+  .image-box img {
+    max-width: 300px; /* Smaller image size */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .about-intro {
+    padding: 20px 5px; /* Very small padding for mobile screens */
+    gap: 15px; /* Minimal gap */
+  }
+
+  .big-title {
+    font-size: 1.2rem; /* Even smaller font size for mobile */
+  }
+
+  .intro-box {
+    margin-top: 10px; /* Remove extra margin */
+  }
+
+  .image-box img {
+    max-width: 100%; /* Make images fully responsive */
+  }
+
+  .text-content {
+    text-align: center; /* Center text on mobile */
+  }
+}

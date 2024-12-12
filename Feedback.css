@@ -24,6 +24,7 @@
   margin-top: 20px;
 }
 
+/* Testimonial section */
 .testimonial {
   margin-top: 40px;
   display: flex;
@@ -32,7 +33,8 @@
   text-align: center;
   position: relative;
   height: 250px; /* Set fixed height for smooth animation */
-  flex-grow: 1; /* Allow the testimonial to grow and fill more space */
+  flex-grow: 1;
+  /* Keep this fixed height for mobile as well */
 }
 
 .quote {
@@ -133,5 +135,131 @@
   100% {
     opacity: 1;
     transform: translateX(0); /* Move into position */
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 1.6rem;
+  }
+
+  .testimonial {
+    height: auto; /* Allow the height to adjust based on content */
+    margin-top: 30px;
+  }
+
+  .quote {
+    font-size: 1.6rem;
+    padding: 10px;
+  }
+
+  .feedback-text {
+    padding: 10px;
+  }
+
+  .testimonial-info {
+    margin-top: 20px;
+  }
+
+  .name {
+    font-size: 1.1rem;
+  }
+
+  .role {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .feedback-section {
+    padding: 30px 15px;
+  }
+
+  .testimonial {
+    height: auto; /* Remove fixed height to allow for flexibility */
+    padding: 10px;
+  }
+
+  .quote {
+    font-size: 1.5rem;
+  }
+
+  .feedback-text {
+    font-size: 1.4rem;
+    padding: 15px;
+  }
+
+  .testimonial-info {
+    margin-top: 20px;
+  }
+
+  .name {
+    font-size: 1.1rem;
+  }
+
+  .role {
+    font-size: 0.9rem;
+  }
+
+  .line {
+    width: 50px;
+    height: 4px;
+  }
+
+  .quote-icon-left {
+    font-size: 2rem;
+    
+    left: -20px;
+  }
+  .quote-icon-right {
+    font-size: 2rem;
+    right:-20px;
+}
+
+@media (max-width: 480px) {
+  .feedback-section {
+    padding: 20px 10px;
+    height: auto;
+  }
+
+  .heading {
+    font-size: 1.4rem;
+  }
+
+  .testimonial {
+    margin-top: 20px;
+  }
+
+  .quote {
+    font-size: 1.4rem;
+    padding: 10px;
+  }
+
+  .feedback-text {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  .testimonial-info {
+    margin-top: 10px;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .role {
+    font-size: 0.85rem;
+  }
+
+  .line {
+    width: 40px;
+    height: 3px;
+  }
+
+  .quote-icon-left,
+  .quote-icon-right {
+    font-size: 2rem;
   }
 }

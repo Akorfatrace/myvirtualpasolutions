@@ -8,7 +8,7 @@ html {
 
 /* General Navbar Styling */
 .navbar {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Raleway", sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,13 +17,13 @@ html {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   border-radius: 30px;
   width: 100%;
-  max-width: 1200px; /* Default width */
+  max-width: 1200px !important; /* Default width */
   margin: 20px auto 0;
 }
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
   .navbar {
-    max-width: 90%; /* Reduce the width of the navbar on smaller screens */
+    max-width: 90% !important; /* Reduce the width of the navbar on smaller screens */
     padding: 0 10px; /* Adjust padding to fit the smaller width */
   }
 }
@@ -48,8 +48,8 @@ html {
 .navbar-links li a {
   text-decoration: none;
   color: #284b64; /* Dark gray for the text */
-  font-size: 16px; /* Adjusted font size */
-  font-weight: 500;
+  font-size: 14px; /* Adjusted font size */
+  font-weight: 400;
   position: relative;
   transition: color 0.3s ease;
   cursor: pointer;

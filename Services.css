@@ -1,101 +1,136 @@
 @import url("https://fonts.googleapis.com/css2?family=Cookie&family=Quicksand:wght@400;700&family=Raleway:wght@400;700&display=swap");
 
+/* Services Section Container */
 .services-container {
   font-family: "Raleway", sans-serif;
   text-align: center;
-  padding: 20px;
+  padding: 50px 20px;
+  min-height: 590px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   background: linear-gradient(
     to right,
-    rgba(255, 192, 203, 0.2),
-    /* Light pink */ rgba(173, 216, 230, 0.2) /* Light blue */
+    rgba(255, 192, 203, 0.1),
+    rgba(173, 216, 230, 0.1)
   );
-  height: 560px;
-  border-radius: 10px; /* Optional: adds smooth corners */
+}
+
+/* Navbar Styles */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  margin-bottom: 0px;
+}
+
+/* Services Intro Section */
+.services-intro {
+  flex: 1 1 40%;
+  text-align: left;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInFromLeft 1s forwards 0.5s;
+}
+
+@keyframes slideInFromLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .services-intro h1 {
-  font-family: "Quicksand", sans-serif;
-  margin-top: 10px;
-  color: #284b64;
-  transition: all 0.3s ease-in-out;
-  font-size: 2rem;
-  font-weight: Bold;
+  font-family: "Cookie", cursive;
+  font-size: 4rem;
+  color: #003366;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
 }
 
 .services-intro p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
   font-size: 1rem;
-  line-height: 1.5;
-  color: #353535; /* Darker text color for contrast */
+  line-height: 1.6;
+  color: #353535;
   margin-top: 20px;
-  transition: opacity 0.3s ease-in-out;
-}
-
-/* Add transition to text */
-.services-intro p {
   opacity: 1;
-  animation: fadeInText 3s forwards 1s; /* Fade-in effect after some time */
+  animation: fadeInText 3s forwards 1s;
+  margin-left: 1rem;
+  word-wrap: break-word !important;
 }
 
-/* Animation to make the text appear smoothly */
 @keyframes fadeInText {
   to {
     opacity: 1;
   }
 }
 
+/* Carousel Section */
 .services-carousel {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Stack the cards vertically */
   align-items: center;
   justify-content: center;
+  width: 80%;
   margin-top: 20px;
+  margin-left: 70px;
+  gap: 10px;
 }
 
+/* Carousel Cards */
 .carousel-cards {
+  margin-top: 50px;
   display: flex;
-  gap: 90px;
-  transition: transform 0.5s ease-in-out;
+  flex-direction: column; /* Stack cards vertically */
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
 }
 
 .carousel-card {
-  background-color: rgb(255, 255, 255); /* White background for cards */
-  padding: 10px;
-  border-radius: 20px 10px 30px 10px; /* Mixed border-radius design */
-  width: 310px;
-  height: 320px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Adjust width to stack vertically and fit content */
+  max-width: 500px; /* Limit the maximum width */
+  padding: 20px;
+  border-radius: 30px;
+  height: 200px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 192, 203, 0.2),
+    rgba(173, 216, 230, 0.2)
+  );
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   position: relative;
-  margin-top: 30px;
-  margin-bottom: 10px;
+
+  margin-bottom: 40px; /* Adjust space between the cards */
 }
 
 .carousel-card h4 {
-  font-size: 1.8rem;
-  margin: 40px 0;
-  z-index: 3;
   font-family: "Cookie", cursive;
-  background: linear-gradient(
-    135deg,
-    #284b64,
-    #3d6e71,
-    #f186aa,
-    /* Added pink trace to card headings */ #284b64
-  ); /* Gradient with blue and pink */
-  -webkit-background-clip: text;
-  color: transparent; /* Ensure text uses gradient */
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 1rem;
 }
 
 .carousel-card p {
   font-size: 0.9rem;
-  line-height: 1.4;
-  z-index: 3;
-  color: black; /* Reverted text color to black for contrast */
+  line-height: 1.6;
+  color: #353535;
 }
 
 .carousel-card .hover-content {
@@ -107,62 +142,102 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(240, 199, 245, 0); /* Blue overlay */
-  backdrop-filter: blur(8px); /* Reduced blur for better control */
+  background: rgba(240, 231, 241, 0.8);
+  backdrop-filter: blur(8px);
   opacity: 0;
-  transition: opacity 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out; /* Smooth transition */
+  transition: opacity 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
   padding: 20px;
-  border-radius: 10px;
-  font-size: 1rem;
-  z-index: 3; /* Ensure it is above other elements */
+  border-radius: 15px;
+  font-size: 1.1rem;
 }
 
 .carousel-card:hover .hover-content {
-  opacity: 1; /* Show on hover */
-  backdrop-filter: blur(120px); /* Full blur on hover */
+  opacity: 1;
+  backdrop-filter: blur(12px);
 }
 
 .carousel-card:hover {
-  transform: translateY(10px) scale(1.05);
-}
-
-.carousel-button {
-  background-color: rgba(40, 75, 100, 0.3);
-  border: none;
-  font-size: 0.8rem;
   cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #ffffff;
 }
 
-.carousel-button.left {
-  left: 10px;
-}
-
-.carousel-button.right {
-  right: 10px;
-}
-
+/* Carousel Indicators */
 .carousel-indicators {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  position: relative;
-  top: 20px;
+  margin-top: 40px; /* Adjust this value if needed */
 }
 
 .indicator {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   margin: 0 6px;
   border-radius: 50%;
-  background-color: #e0d9d9;
+  background-color: #9b9a9a;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .indicator.active {
-  background-color: #284b64; /* Highlight active indicator */
+  background-color: #284b64;
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+    padding: 0; /* Remove padding to allow full width */
+  }
+
+  .services-intro {
+    width: 100%; /* Take full width */
+    text-align: left;
+    margin: 0; /* Remove default margins */
+    padding: 0 10px; /* Add slight horizontal padding */
+    display: block; /* Ensure block-level layout */
+  }
+
+  .services-intro h1 {
+    margin: 20px 0 10px 0; /* Top and bottom margins only */
+    font-size: 2rem;
+  }
+
+  .services-intro p {
+    margin: 10px 0; /* Remove left margin */
+    font-size: 1rem; /* Slightly smaller font size */
+    word-wrap: break-word; /* Allow text to break and wrap across the line */
+  }
+
+  .services-carousel {
+    width: 100%;
+    margin-top: 20px; /* Space below intro */
+  }
+}
+
+@media (max-width: 480px) {
+  .services-container {
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .services-intro {
+    padding: 0 5px; /* Minimal horizontal padding */
+  }
+
+  .services-intro h1 {
+    font-size: 1.5rem;
+    margin: 10px 0; /* Adjust margins */
+  }
+
+  .services-intro p {
+    font-size: 0.9rem;
+    word-wrap: break-word; /* Allow text to break and wrap across the line */
+  }
+
+  .carousel-card {
+    max-width: 100%; /* Take full available width */
+    height: auto;
+  }
+
+  .service-icon {
+    font-size: 1.5rem; /* Adjust icon size */
+  }
 }

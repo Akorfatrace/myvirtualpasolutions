@@ -4,14 +4,14 @@
 /* Pink background and heading styling */
 .virtual-assistant-section {
   background-color: rgba(255, 217, 216, 0.2);
-  padding: 40px 0;
+  padding: 40px 20px; /* Adjusted for smaller screens */
   text-align: center;
   border-bottom-left-radius: 150px;
 }
 
 .section-heading {
-  font-family: "Quicksand", sans-serif; /* Quicksand font */
-  font-size: 2rem;
+  font-family: "Quicksand", sans-serif;
+  font-size: 2.4rem;
   color: #284b64;
   margin-bottom: 30px;
   font-weight: bold;
@@ -35,13 +35,13 @@
   background-color: transparent;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transition */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 /* Hover effect on cards */
 .reason-card:hover {
-  transform: translateY(-10px); /* Slight lift effect */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Image and text placement */
@@ -64,12 +64,12 @@
   width: 300px;
   height: auto;
   border-radius: 10px;
-  transition: transform 0.3s ease-in-out; /* Smooth transition for zoom effect */
+  transition: transform 0.3s ease-in-out;
 }
 
 /* Hover effect on images */
 .reason-card:hover .reason-image {
-  transform: scale(1.05); /* Zoom-in effect */
+  transform: scale(1.05);
 }
 
 /* Text container */
@@ -79,27 +79,46 @@
 
 /* Text styling */
 .reason-text-container h4 {
-  font-family: "Cookie", cursive; /* Cookie font */
+  font-family: "Cookie", cursive;
   font-size: 2.7rem;
   margin-bottom: 10px;
   color: #284b64;
 }
 
 .reason-text-container p {
-  font-family: "Raleway", sans-serif; /* Raleway font */
-  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.1rem;
   color: #353535;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .virtual-assistant-section {
+    padding: 20px 10px; /* Reduced padding */
+  }
+
   .reason-card {
     flex-direction: column;
     text-align: center;
+    padding: 15px; /* Less padding on smaller screens */
   }
 
   .reason-image {
     width: 100%;
-    max-width: 400px;
+    max-width: 300px; /* Adjusted size */
+    margin-bottom: 1px; /* Space between image and text */
+  }
+
+  .reason-text-container h4 {
+    font-size: 2rem; /* Slightly smaller font for heading */
+  }
+
+  .reason-text-container p {
+    font-size: 0.8rem; /* Slightly smaller font for paragraph */
+  }
+
+  .reason-card.left,
+  .reason-card.right {
+    gap: 0; /* Remove large gap between image and text */
   }
 }

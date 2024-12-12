@@ -1,0 +1,150 @@
+/* Layout styles */
+.partnership-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; /* Align at the top */
+  justify-content: center;
+  padding: 2rem 1rem;
+  gap: 3rem;
+  background-color: rgba(61, 110, 113, 0.1);
+  height: auto; /* Allow section height to be flexible */
+  border-radius: 0px 0px 0px 100px;
+}
+
+.text-container {
+  flex: 1 1 60%;
+  max-width: 400px;
+  text-align: left;
+  padding: 20px;
+  margin-bottom: 10rem;
+}
+
+.text-container h2 {
+  font-family: "Cookie", cursive;
+  font-size: 3rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.text-container p {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2b2a2a;
+  line-height: 1.6;
+}
+
+/* Carousel styles */
+.carousel {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  height: auto;
+}
+
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Default for larger screens */
+  gap: 3rem; /* Increased gap between cards */
+  position: relative;
+  width: calc(2 * 350px + 1rem); /* Fit 2 cards */
+  height: 100%;
+  margin-left: 4rem;
+}
+
+/* Adjust the card for small screens */
+.card {
+  background: white;
+  border: 1px solid rgb(236, 223, 223);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(0, 0, 0, 0);
+  padding: 1.5rem 1.5rem 0;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100%);
+  animation: slideUp 1s ease forwards;
+  height: 380px;
+  width: 300px;
+  outline: none;
+  margin-top: 40px;
+}
+
+.card h3 {
+  font-family: "Cookie", cursive;
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-family: "Raleway", sans-serif;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Slide-in Animation */
+.cards-wrapper .card {
+  animation: slideUp 1s ease forwards;
+  animation-delay: calc(var(--card-index, 0) * 0.2s);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .partnership-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    height: auto;
+    gap: 2rem;
+  }
+
+  .text-container {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .text-container h2 {
+    font-size: 2rem; /* Adjust the heading size */
+  }
+
+  .carousel {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem; /* Adds spacing between text and cards */
+  }
+
+  .cards-wrapper {
+    display: grid;
+    grid-template-rows: 1fr; /* Display 1 card per row */
+    width: 100%; /* Ensure cards take full width */
+    margin-left: 0;
+    gap: 2rem; /* Adjust gap for smaller screens */
+  }
+
+  .card {
+    width: 90%; /* Reduce card width for smaller screens */
+    margin: 0 auto; /* Center the card */
+  }
+}
+
+@media (max-width: 480px) {
+  .text-container h2 {
+    font-size: 1.5rem; /* Make heading smaller on very small screens */
+  }
+
+  .text-container p {
+    font-size: 0.9rem; /* Smaller text size for better readability */
+  }
+}

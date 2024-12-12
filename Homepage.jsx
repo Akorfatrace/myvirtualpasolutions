@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "./Homepage.css";
-import Services from "./Services";
+
 import VirtualAssistant from "./VirtualAssistant";
 import AlternatingText from "./AlternatingText";
 import IntroSection from "./IntroSection";
@@ -17,28 +17,32 @@ const Homepage = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const heroRef = useRef(null);
 
-  // Image transition every 10 seconds
+  // Change the hero image periodically
   useEffect(() => {
-    const intervalId = setInterval(() => {
+    const interval = setInterval(() => {
       setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-    }, 10000);
+    }, 5000); // Change image every 5 seconds
 
-    return () => clearInterval(intervalId);
-  }, []);
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, [images.length]);
 
-  // Parallax scroll effect
+  // Handle scroll effects for hero section
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
+      const fadeOutThreshold = window.innerWidth <= 768 ? 200 : 500;
 
       if (heroRef.current) {
-        const opacity = 1 - scrollY / 500;
-        heroRef.current.style.opacity = opacity;
+        // Calculate opacity and translation
+        const opacity = 1 - scrollY / fadeOutThreshold;
+        heroRef.current.style.opacity = opacity < 0 ? 0 : opacity;
         heroRef.current.style.transform = `translateY(${scrollY * -0.2}px)`;
 
-        // Ensure the hero text is hidden after passing the hero section
-        if (scrollY > 300) {
-          heroRef.current.classList.add("hidden");
+        // Dynamically toggle the hidden class
+        if (scrollY > fadeOutThreshold) {
+          if (!heroRef.current.classList.contains("hidden")) {
+            heroRef.current.classList.add("hidden");
+          }
         } else {
           heroRef.current.classList.remove("hidden");
         }
@@ -61,7 +65,7 @@ const Homepage = () => {
           <p className="hero-subtitle">Your Success • Our Priority</p>
         </div>
       </div>
-      <Services />
+
       <AlternatingText />
       <IntroSection />
       <VirtualAssistant />

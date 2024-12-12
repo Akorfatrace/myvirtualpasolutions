@@ -1,12 +1,13 @@
+/* General styles for alternating text */
 .alternating-text {
-  font-size: 16px; /* Reduced font size */
+  font-size: 17px; /* Default font size */
   font-family: "Raleway", sans-serif;
-  font-weight: 200; /* Adjusted weight for better readability */
+  font-weight: 200;
   text-align: center;
-  padding: 20px 10px; /* Reduced padding */
+  padding: 20px 10px; /* Padding to prevent text from touching the edges */
   color: #353535;
-  width: 100%; /* Full width */
-  height: 47px; /* Reduced height */
+  width: 100%; /* Ensure it takes full width */
+  height: 47px; /* Default height, can be adjusted dynamically */
   position: relative;
   overflow: hidden;
   background: linear-gradient(
@@ -18,13 +19,10 @@
   z-index: 1;
 }
 
-.alternating-text * {
-  border-radius: 0; /* Apply to all child elements to ensure no border-radius */
-}
-
+/* Tagline styles */
 .tagline {
   opacity: 0;
-  transform: translateY(20px); /* Initial position for slide effect */
+  transform: translateY(20px); /* Start position for slide effect */
   transition: opacity 1.5s ease, transform 1.5s ease;
   position: absolute;
   width: 100%;
@@ -41,4 +39,34 @@
 .fade-in {
   opacity: 1;
   transform: translateY(0); /* Slide into view */
+}
+
+/* Responsive styling for smaller screens */
+
+/* For tablets and below (max-width: 768px) */
+@media (max-width: 768px) {
+  .alternating-text {
+    font-size: 15px; /* Slightly smaller text on tablets */
+    height: auto; /* Adjust height dynamically */
+    padding: 15px 8px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* For mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .alternating-text {
+    font-size: 13px; /* Smaller font size on very small screens */
+    padding: 10px 5px; /* Reduced padding for small screens */
+  }
+}
+/* Adjust height for smaller screens */
+@media (max-width: 768px) {
+  .alternating-text {
+    height: 40px; /* Increase height for better visibility on smaller screens */
+  }
+}
+@media (max-width: 480px) {
+  .alternating-text {
+    height: 40px; /* Further increase height for mobile screens */
+  }
 }

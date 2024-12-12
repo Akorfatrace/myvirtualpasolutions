@@ -10,11 +10,10 @@ html {
   margin: 30px 0; /* Vertical spacing only */
   padding: 0; /* No padding to prevent centering */
   width: 100%; /* Full width to occupy the screen */
-  max-width: none; /* Remove any restrictions */
   display: flex; /* Use flexbox for alignment */
   flex-direction: column; /* Stack elements vertically */
-  align-items: flex-start; /* Align all content to the left */
-  margin-left: 30px;
+  align-items: flex-start; /* Align content to the left */
+  padding-left: 10px; /* Adjusted left padding to match dash */
 }
 
 /* Dash Styling */
@@ -22,7 +21,6 @@ html {
   width: 70px; /* Dash width */
   height: 5px; /* Dash height */
   background-color: #284b64; /* Dash color */
-  margin-left: 10px; /* Ensure the dash is at the extreme left */
   margin-bottom: 15px; /* Add spacing below */
   border-radius: 10px;
 }
@@ -31,7 +29,6 @@ html {
 .text-wrapper {
   display: flex;
   flex-direction: column; /* Stack text vertically */
-  margin-left: 10px; /* Ensure alignment with the dash */
 }
 
 /* Line One: Meet the People */
@@ -52,7 +49,48 @@ html {
   margin: 0; /* Remove extra margins */
 }
 
-/* Ensure Content Stays at the Extreme Left */
-.meet-section {
-  padding-left: 0; /* Remove any padding */
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .meet-line-one,
+  .meet-line-two {
+    font-size: 1.8rem; /* Slightly smaller font size for medium screens */
+  }
+
+  .meet-section {
+    padding-left: 20px; /* Add a bit more space for smaller screens */
+  }
+
+  .dash {
+    width: 60px; /* Adjust dash width for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .meet-line-one,
+  .meet-line-two {
+    font-size: 1.6rem; /* Reduce font size for small screens */
+  }
+
+  .meet-section {
+    padding-left: 15px; /* Adjust left padding further */
+  }
+
+  .dash {
+    width: 50px; /* Adjust dash width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .meet-line-one,
+  .meet-line-two {
+    font-size: 1.4rem; /* Smaller font size for very small screens */
+  }
+
+  .meet-section {
+    padding-left: 10px; /* Reduce left padding for very small screens */
+  }
+
+  .dash {
+    width: 40px; /* Narrower dash for small screens */
+  }
 }

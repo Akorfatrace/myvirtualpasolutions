@@ -1,25 +1,26 @@
-// src/App.jsx
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ScrollToTop from "./ScrollToTop";
+import ScrollToTop from "./ScrollToTop"; // Corrected path
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import Homepage from "../Homepage"; // Ensure the path is correct
-import Contact from "../Contact"; // Import the new Contact component
+import Homepage from "../Homepage";
+import Contact from "../Contact";
 import AboutUs from "../AboutUs";
+import Services from "../Services";
+import NewsletterPopup from "../NewsletterPopup";
 
 const App = () => {
   return (
     <Router>
-      {/* Add ScrollToTop inside Router */}
       <ScrollToTop />
+      <NewsletterPopup />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/contact" element={<Contact />} />{" "}
-        {/* Add the new route */}
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<Services />} />
       </Routes>
     </Router>
   );

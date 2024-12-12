@@ -6,21 +6,21 @@ const Feedback = () => {
   // Testimonial data
   const testimonials = [
     {
-      text: "The service we received was outstanding! We felt like the team truly cared about our success. Their approach was personalized and professional every step of the way.",
-      name: "John Doe",
-      role: "CEO, CompanyName",
+      text: "Myma ensures that the behind the scenes work is getting done, so I get to solely focus on what I'm good at.",
+      name: "Reina Rose",
+      role: "Author & Speaker, The Soul Nutritionist",
       rating: 5,
     },
     {
-      text: "Fantastic experience! The team went above and beyond to understand our needs. Their expertise made a huge difference in our business growth.",
-      name: "Jane Smith",
-      role: "Founder, BusinessName",
-      rating: 4,
+      text: "Myma embodies team Kash Memphis. Apart from making my work so much more efficient, she is a source of encouragement and I appreciate that.",
+      name: "Kash Memphis",
+      role: "Musical Artist, Kash Memphis",
+      rating: 5,
     },
     {
-      text: "Professional, efficient, and always available for any questions we had. We couldn't have asked for a better partnership.",
-      name: "Mark Johnson",
-      role: "Director, AnotherCompany",
+      text: "She simplified things for me! Her efficiency allowed me to focus on other areas of my business that needed more of my attention. She's the team I needed.",
+      name: "Annabel Kalai",
+      role: "Founder, A'La'La Candles",
       rating: 5,
     },
   ];

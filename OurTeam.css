@@ -1,13 +1,14 @@
 /* Our Team Section */
 .our-team-section {
   background-color: #284b64; /* Navy-like background */
-  width: 100vw; /* Full viewport width */
+  width: 100%; /* Full width */
   padding: 50px 20px; /* Padding for section */
   display: flex; /* Flex layout for the frames */
   justify-content: center; /* Center the frames horizontally */
   gap: 20px; /* Space between frames */
   box-sizing: border-box; /* Include padding in width calculations */
-  height: 800px;
+  height: 800px; /* Maintain height for desktop */
+  overflow: hidden; /* Prevent content overflow */
 }
 
 /* General Styling for Ash Frames */
@@ -26,7 +27,7 @@
 .frame-one {
   width: 100%;
   max-width: 890px; /* Max width for responsiveness */
-  height: 600px;
+  height: 600px; /* Fixed height for desktop */
 }
 
 /* Card Container for Horizontal Cards */
@@ -35,13 +36,14 @@
   justify-content: space-between; /* Equal spacing between cards */
   width: 100%; /* Full width for the card container */
   gap: 20px; /* Space between individual cards */
+  overflow: hidden; /* Prevent content overflow */
 }
 
 /* Frame 2 Specifics (Vertical Layout) */
 .frame-two {
-  width: 100%; /* Let the frame fill the container but no more */
-  max-width: 320px; /* Keep this consistent with your design */
-  height: 700px;
+  width: 100%;
+  max-width: 320px;
+  height: 700px; /* Maintain fixed height for desktop */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -50,35 +52,23 @@
 }
 
 /* Headings */
-.frame-one-heading {
-  text-align: center;
-  color: #284b64; /* Keeping your original color */
-  font-size: 24px;
-  font-weight: bold;
-}
+.frame-one-heading,
 .frame-two-heading {
   text-align: center;
-  color: #284b64; /* Keeping your original color */
+  color: #284b64;
   font-size: 24px;
   font-weight: bold;
-  margin-top: 20px;
+  font-family: "Quicksand", sans-serif; /* Using Quicksand for headings */
 }
 
-/* Subheading for Frame One */
-.frame-one-subheading {
-  text-align: center;
-  color: #3d6e71; /* Keeping your original color */
-  font-size: 16px;
-  margin-bottom: 30px; /* Adjust this value for spacing */
-}
-
-/* Subheading for Frame Two */
+/* Subheadings */
+.frame-one-subheading,
 .frame-two-subheading {
   text-align: center;
-  color: #3d6e71; /* Keeping your original color */
+  color: #3d6e71;
   font-size: 16px;
-  margin-bottom: 60px; /* Adjust this value for spacing */
-  margin-top: 20px;
+  margin-bottom: 30px;
+  font-family: "Raleway", sans-serif; /* Using Raleway for subheading */
 }
 
 /* White Cards Styling */
@@ -86,7 +76,7 @@
   background-color: #ffffff; /* White background */
   color: #333333; /* Dark text */
   width: 100%; /* Full width of the frame */
-  height: 400px; /* Fixed height for all cards */
+  height: 400px; /* Fixed height for desktop */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -96,6 +86,14 @@
   padding: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
+  font-family: "Raleway", sans-serif; /* Raleway for card content */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover transition effect */
+}
+
+/* Hover effect on card */
+.white-card:hover {
+  transform: translateY(-10px); /* Slightly raise the card */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
 }
 
 /* Worker Details */
@@ -110,10 +108,11 @@
   font-size: 14px;
   color: #353535;
   margin-bottom: 10px;
+  font-family: "Cookie", cursive; /* Using Cookie for roles */
 }
 
 .worker-description {
-  font-size: 12px;
+  font-size: 14px;
   color: #353535;
 }
 
@@ -151,16 +150,51 @@
 /* Responsiveness */
 @media (max-width: 768px) {
   .our-team-section {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Stack frames vertically */
+    align-items: center; /* Center-align frames */
+    padding: 20px; /* Adjust padding for smaller screens */
+    height: auto; /* Allow dynamic height */
+  }
+
+  .frame-one,
+  .frame-two {
+    width: 100%; /* Allow full width */
+    max-width: 100%; /* Prevent horizontal scrolling */
+    padding: 0; /* Remove extra padding */
+    height: auto; /* Adjust height dynamically */
   }
 
   .frame-one .card-container {
-    flex-direction: column;
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center-align cards */
+    gap: 20px;
   }
 
-  .frame-two {
-    max-width: 100%;
-    align-items: stretch;
+  .white-card {
+    max-width: 100%; /* Full width for smaller screens */
+    margin: 0 auto; /* Center cards */
+    height: auto; /* Flexible height for content */
+  }
+
+  .frame-two .decorative-card {
+    max-width: 100%; /* Match container width */
+    height: auto; /* Adjust height */
+    margin-top: 20px;
+  }
+
+  .frame-one-heading,
+  .frame-two-heading,
+  .frame-one-subheading,
+  .frame-two-subheading {
+    font-size: 18px; /* Smaller font sizes */
+    margin: 10px 0; /* Adjust spacing */
+  }
+
+  .worker-role {
+    font-size: 12px; /* Smaller font size for roles */
+  }
+
+  .worker-description {
+    font-size: 12px; /* Adjust description font size */
   }
 }

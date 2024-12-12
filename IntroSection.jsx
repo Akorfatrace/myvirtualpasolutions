@@ -30,9 +30,19 @@ const IntroSection = () => {
             entrepreneurs and executives to focus on growth, leaving the details
             to us.
           </p>
-          <Link to="/Contact" className="learn-more">
-            Get in Touch with Us
-            <span className="arrow-right">→</span>
+          <Link to="/Services" className="learn-more">
+            Learn More
+            <span className="arrow-right">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="16"
+                height="16"
+              >
+                <path d="M10 6l6 6-6 6" />
+              </svg>
+            </span>
           </Link>
         </div>
         <img

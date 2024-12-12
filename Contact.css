@@ -12,8 +12,8 @@
   margin: 0;
 }
 
+/* Background for full screen */
 .background-wrapper {
-  flex: 1;
   background-image: url("/images/contact-background.png");
   background-size: cover;
   background-position: bottom center;
@@ -49,11 +49,16 @@
   border-radius: 40px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  width: 90%;
-  max-width: 900px;
-  height: 540px;
-  margin-top: 40px;
+  width: 95%; /* Increase the width to give more space */
+  max-width: 1000px; /* Increase max-width */
+  height: auto; /* Let height adjust based on content */
+  margin-top: 140px;
   margin-bottom: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center form content horizontally */
+  padding-left: 20px; /* Add padding to prevent content from touching the edge */
+  padding-right: 20px; /* Same as above */
 }
 
 /* Card Wrapper Styling */
@@ -119,14 +124,14 @@
   color: white;
   padding: 20px;
   border-radius: 25px;
-  width: 360px;
+  width: 420px;
   height: auto;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   margin-left: auto;
   margin-right: 20px;
   scroll-margin-bottom: 20px;
-  margin-top: -17px; /* Ensures it is aligned at the top of its container */
+  margin-top: 5px; /* Ensures it is aligned at the top of its container */
 }
 .small-card h3 {
   font-size: 20px;
@@ -145,40 +150,48 @@
 form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* Center the form elements */
+  width: 100%;
 }
 
 /* Input, Textarea, Select Field Styling */
 input,
-textarea {
-  width: 200px;
+textarea,
+select {
+  width: 100%; /* Set to 100% to ensure fields expand fully */
+  max-width: 140%; /* Allow fields to be wider */
   padding: 15px;
   margin: 10px 0;
   border: none;
-  border-radius: 12px; /* Slight curve on the edges */
-  background: transparent;
-  color: white;
-  font-size: 12.8px;
-  outline: none;
-  border-bottom: 1.5px solid #ffd9d8;
-  display: block;
-  margin-left: auto; /* Centers the element */
-  margin-right: auto; /* Centers the element */
-}
-
-select {
-  width: 100%;
-  max-width: 360px;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 12.5px; /* Slight curve on the edges */
+  border-radius: 12px;
   background: transparent;
   color: white;
   font-size: 14px;
   outline: none;
-  border-bottom: 1.5px solid #ccc;
+  border-bottom: 1.5px solid #ffd9d8;
   display: block;
+  box-sizing: border-box; /* Ensures padding does not affect width */
+  min-width: 300px; /* Optional: ensure fields have a minimum width for readability */
+  text-align: center; /* Ensure the placeholder text is centered */
+}
+
+/* Button Styling */
+button {
+  background-color: #284b64; /* Blue color for the button */
+  color: #ffd9d8;
+  border: none;
+  padding: 16px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 100%; /* Button spans full width */
+  max-width: 140%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  min-width: 300px; /* Optional: ensure button has a minimum width */
+}
+
+button:hover {
+  background-color: #3d6e71; /* Darker blue on hover */
 }
 
 /* Placeholder Styling */
@@ -188,53 +201,83 @@ textarea::placeholder {
   text-align: center;
 }
 
-/* Select Dropdown Styling */
-select {
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 12px;
-  background: transparent;
-  color: white;
-  font-size: 12px;
-  outline: none;
-  border-bottom: 1.5px solid #ffd9d8;
+/* Media Queries for Smaller Screens (Mobile & Tablet) */
+
+/* For small screens (mobile) */
+@media (max-width: 600px) {
+  .form-card {
+    width: 90%; /* Form card width on mobile */
+    margin-top: 20px;
+    padding: 20px;
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  /* Stack the text and form elements vertically */
+  .card-wrapper {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    gap: 10px; /* Smaller gap between items */
+  }
+
+  /* Form fields span full width */
+  input,
+  textarea,
+  select {
+    width: 100%;
+    max-width: 100%; /* Reset max-width on small screens */
+    padding: 12px;
+    font-size: 14px; /* Slightly larger font for readability */
+  }
+
+  button {
+    width: 100%; /* Full width button on mobile */
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  /* Ensure proper alignment and spacing for elements */
+  .heading-1 h2 {
+    font-size: 2rem; /* Adjust font size */
+    margin-top: 20px;
+  }
+
+  .small-card {
+    width: 90%;
+    margin-top: 10px;
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .info-description p {
+    font-size: 14px; /* Adjust font size */
+  }
 }
 
-select option {
-  background-color: #284b64;
-  color: white;
-}
+/* For medium screens (tablets) */
+@media (max-width: 768px) {
+  .form-card {
+    width: 90%; /* Adjust form card width on tablets */
+    margin-top: 30px;
+    padding: 25px;
+    flex-direction: column; /* Stack elements vertically */
+  }
 
-select:focus {
-  background-color: #3d6e71;
-  color: white;
-}
+  /* Stack items vertically on tablet screens */
+  .card-wrapper {
+    flex-direction: column;
+    gap: 15px;
+  }
 
-input[type="text"].social-media::placeholder {
-  text-align: center;
-}
+  input,
+  textarea,
+  select {
+    width: 100%;
+    max-width: 100%;
+    padding: 14px;
+    font-size: 14px;
+  }
 
-/* Button Styling */
-button {
-  background-color: #284b64;
-  color: #ffd9d8;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 12px;
-  cursor: pointer;
-  margin-top: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-}
-
-button:hover {
-  background-color: #3d6e71;
-}
-
-/* Error Message Styling */
-.error {
-  color: #ff6b6b;
-  font-size: 12px;
-  margin-top: -8px;
-  margin-bottom: 10px;
+  button {
+    width: 100%;
+    padding: 14px;
+  }
 }

@@ -3,46 +3,34 @@ html,
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden !important; /* Prevent horizontal scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
   width: 100%; /* Ensure full width */
   height: 100%; /* Ensure full height */
   box-sizing: border-box; /* Apply box-sizing to all elements */
-  min-width: 100%; /* Prevent body from being smaller than viewport */
 }
 
-/* Prevent horizontal scrolling on all elements */
+/* Ensure elements inherit the box-sizing */
 *,
 *::before,
 *::after {
-  box-sizing: inherit; /* Ensure all elements inherit the box-sizing */
-  overflow-x: hidden; /* Prevent overflow for all elements */
+  box-sizing: inherit;
 }
 
-/* Make sure elements do not cause overflow */
-.parallax-background,
-.hero,
-.intro-section,
-.service-section,
-.content-section {
+/* Ensure content is centered and doesn't cause overflow */
+.services-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Centering the container */
   width: 100%; /* Ensure full width */
   overflow-x: hidden; /* Prevent horizontal overflow */
-  position: relative; /* Ensures any absolute/fixed elements stay within bounds */
 }
 
-/* Prevent images or media from overflowing */
+/* Make sure media elements do not overflow */
 img,
 video {
-  max-width: 100%; /* Ensure media elements do not overflow */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 100%;
+  height: auto;
   display: block; /* Removes any inline-block margin issues */
-}
-
-/* Ensure content doesn't exceed the viewport width */
-.container,
-.wrapper,
-.main-content {
-  max-width: 100%; /* Prevent content from spilling beyond the viewport */
-  overflow-x: hidden; /* Ensure no content overflows */
 }
 
 /* Footer styling */
@@ -54,8 +42,8 @@ video {
   position: relative; /* Ensures footer stays within bounds */
 }
 
-/* Prevent horizontal scrolling on specific sections */
+/* Ensure sections do not overflow horizontally */
 section {
-  overflow-x: hidden; /* Prevent horizontal scrolling in all sections */
   width: 100%; /* Ensure sections do not exceed viewport */
+  overflow-x: hidden;
 }

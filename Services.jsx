@@ -1,10 +1,18 @@
 import React, { useState } from "react";
+import { AiOutlineMail } from "react-icons/ai"; // Inbox Management
+import { FaCalendarAlt, FaTwitter, FaHeadset, FaTasks } from "react-icons/fa";
+import { IoSettingsOutline } from "react-icons/io5"; // Automation and System Review
 import "./Services.css";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import Partnership from "./Partnership";
+import AlternatingText from "./AlternatingText";
 
 const Services = () => {
   const services = [
     {
       title: "Inbox Management",
+      icon: <AiOutlineMail />,
       description:
         "Keep your inbox organized and focus on what matters most with tailored email management.",
       hoverText:
@@ -12,6 +20,7 @@ const Services = () => {
     },
     {
       title: "Calendar Management",
+      icon: <FaCalendarAlt />,
       description:
         "Organize your schedule effortlessly with meeting planning and personalized reminders.",
       hoverText:
@@ -19,6 +28,7 @@ const Services = () => {
     },
     {
       title: "Social Media Management",
+      icon: <FaTwitter />,
       description:
         "Manage your social presence effortlessly with content creation, scheduling, and active engagement.",
       hoverText:
@@ -26,6 +36,7 @@ const Services = () => {
     },
     {
       title: "Customer Service Care",
+      icon: <FaHeadset />,
       description:
         "Streamline customer interactions with prompt responses and personalized support across multiple channels.",
       hoverText:
@@ -33,6 +44,7 @@ const Services = () => {
     },
     {
       title: "Scheduling and Workflow Management",
+      icon: <FaTasks />,
       description:
         "Optimize your time and workflows with efficient scheduling and task management.",
       hoverText:
@@ -40,6 +52,7 @@ const Services = () => {
     },
     {
       title: "Automation and System Review",
+      icon: <IoSettingsOutline />,
       description:
         "Boost efficiency by minimizing repetitive tasks with tailored templates and optimized workflows.",
       hoverText:
@@ -50,65 +63,72 @@ const Services = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [nextIndex, setNextIndex] = useState(1);
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % services.length);
-    setNextIndex((prevIndex) => (prevIndex + 1) % services.length);
-  };
-
-  const prevSlide = () => {
+  const changeSlide = (direction) => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + services.length) % services.length
+      (prevIndex) => (prevIndex + direction + services.length) % services.length
     );
     setNextIndex(
-      (prevIndex) => (prevIndex - 1 + services.length) % services.length
+      (prevIndex) => (prevIndex + direction + services.length) % services.length
     );
   };
 
   return (
-    <div className="services-container" id="services">
-      <div className="services-intro">
-        <h1>Our Services</h1>
-        <p>Simplifying Business, Amplifying Impact.</p>
+    <>
+      <div className="navbar-wrapper">
+        <Navbar />
       </div>
-      <div className="services-carousel">
-        <button className="carousel-button left" onClick={prevSlide}>
-          ←
-        </button>
-        <div className="carousel-cards">
-          <div className="carousel-card" key={currentIndex}>
-            <h4>{services[currentIndex].title}</h4>
-            <p>{services[currentIndex].description}</p>
-            <div className="hover-content">
-              <p>{services[currentIndex].hoverText}</p>
-            </div>
-          </div>
-          <div className="carousel-card" key={nextIndex}>
-            <h4>{services[nextIndex].title}</h4>
-            <p>{services[nextIndex].description}</p>
-            <div className="hover-content">
-              <p>{services[nextIndex].hoverText}</p>
-            </div>
-          </div>
+      <div className="services-container" id="services">
+        <div className="services-intro">
+          <h1>Our Services</h1>
+          <p>
+            From managing emails to crafting presentations, we handle the tasks
+            that keep you productive. Our solutions are designed to empower your
+            growth and streamline operations.
+          </p>
         </div>
-        <button className="carousel-button right" onClick={nextSlide}>
-          →
-        </button>
 
-        {/* Carousel Indicators */}
-        <div className="carousel-indicators">
-          {services.map((_, index) => (
-            <span
-              key={index}
-              className={`indicator ${currentIndex === index ? "active" : ""}`}
-              onClick={() => {
-                setCurrentIndex(index);
-                setNextIndex((index + 1) % services.length);
-              }}
-            />
-          ))}
+        <div className="services-carousel">
+          <div className="carousel-left-design"></div>
+
+          <div className="carousel-cards">
+            <div className="carousel-card" key={currentIndex}>
+              <h4>{services[currentIndex].title}</h4>
+              <div className="service-icon">{services[currentIndex].icon}</div>
+              <p>{services[currentIndex].description}</p>
+              <div className="hover-content">
+                <p>{services[currentIndex].hoverText}</p>
+              </div>
+            </div>
+            <div className="carousel-card" key={nextIndex}>
+              <h4>{services[nextIndex].title}</h4>
+              <div className="service-icon">{services[nextIndex].icon}</div>
+              <p>{services[nextIndex].description}</p>
+              <div className="hover-content">
+                <p>{services[nextIndex].hoverText}</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="carousel-indicators">
+            {services.map((_, index) => (
+              <span
+                key={index}
+                className={`indicator ${
+                  currentIndex === index ? "active" : ""
+                }`}
+                onClick={() => {
+                  setCurrentIndex(index);
+                  setNextIndex((index + 1) % services.length);
+                }}
+              />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+      <AlternatingText />
+      <Partnership />
+      <Footer />
+    </>
   );
 };
 
